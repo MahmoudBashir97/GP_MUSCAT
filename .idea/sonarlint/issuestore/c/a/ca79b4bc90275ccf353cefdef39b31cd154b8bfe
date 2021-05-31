@@ -1,0 +1,5 @@
+
+
+java:S1319"uThe type of the "classItems" object should be an interface such as "List" rather than the implementation "ArrayList".(Ùü§ øÿÿÿÿ
+i	java:S116#"TRename this field "ClassName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êµÃü
+j	java:S116$"URename this field "CourseName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¯½º

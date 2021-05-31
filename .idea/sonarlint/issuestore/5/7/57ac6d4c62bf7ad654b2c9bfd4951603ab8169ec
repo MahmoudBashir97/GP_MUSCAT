@@ -1,0 +1,8 @@
+
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(€‚ÒÍıÿÿÿÿ
+O
+java:S1128	"4Remove this unused import 'android.database.Cursor'.(Ôäåúÿÿÿÿ
+B
+java:S16121",Replace this lambda with a method reference.(¥çİÃ
+G
+java:S1612S",Replace this lambda with a method reference.(äè×Òøÿÿÿÿ
