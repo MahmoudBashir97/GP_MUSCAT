@@ -142,8 +142,6 @@ Y
 )app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
 \
 ,app/src/main/res/layout/activity_student.xml,2\4\24860c0cf2e63118aa40609cef57245879a676f4
-f
-6app/src/main/res/layout/activity_student_dashboard.xml,a\0\a009701d5cd6212e7cad1e7f2a4c6c740ce93055
 g
 7app/src/main/res/layout/activity_teacher_dash_borad.xml,d\3\d36907d5abe83eb516ec09e2fc4f5e4a864b8f55
 _
