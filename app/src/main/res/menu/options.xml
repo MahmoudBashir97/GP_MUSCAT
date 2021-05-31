@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:title="Assignments"
+    android:id="@+id/action_Assignments"
+    app:showAsAction="never"></item>
+
+
+    <item android:title="Files"
+        android:id="@+id/action_Files"
+        app:showAsAction="never"></item>
+
+    <item android:title="Marks"
+        android:id="@+id/action_Marks"
+        app:showAsAction="never"></item>
+
+
+
+</menu>

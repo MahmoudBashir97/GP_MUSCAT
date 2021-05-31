@@ -1,0 +1,28 @@
+
+I
+java:S1659!"'Declare "edt_email" on a separate line.(ŸŞù¨ıÿÿÿÿ8ó‰Õœ/
+n	java:S116%"RRename this field "pro_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Ëä‡8úû’ƒœ/
+u	java:S116!"TRename this field "edt_lname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŞù¨ıÿÿÿÿ8ó‰Õœ/
+<
+java:S2119Š"Save and re-use this "Random".(’Æ§ò8Ñåšƒœ/
+J
+java:S1604e"(Make this anonymous inner class a lambda(œÁÈÌşÿÿÿÿ8‰“ ƒœ/
+u	java:S116!"TRename this field "edt_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŞù¨ıÿÿÿÿ8ó‰Õœ/
+y	java:S116 "]Rename this field "teacher_signup_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñáìÇ8ºùÕœ/
+t	java:S116!"SRename this field "edt_pass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŞù¨ıÿÿÿÿ8ó‰Õœ/
+I
+java:S1659!"'Declare "edt_lname" on a separate line.(ŸŞù¨ıÿÿÿÿ8ó‰Õœ/
+E
+java:S1604K"(Make this anonymous inner class a lambda(³Ö×•8 ÷›ƒœ/
+S
+java:S1128"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8ÁÏ–ƒœ/
+u	java:S116!"TRename this field "edt_fname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŞù¨ıÿÿÿÿ8ó‰Õœ/
+J
+java:S1604\"(Make this anonymous inner class a lambda(ò¹æöùÿÿÿÿ8‰“ ƒœ/
+
+java:S1488"aImmediately return this expression instead of assigning it to the temporary variable "randomNum".(ÃªˆÜ8Ñåšƒœ/
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(•µèØ
+J
+java:S1604R"(Make this anonymous inner class a lambda(œÁÈÌşÿÿÿÿ8 ÷›ƒœ/
+H
+java:S1659!"&Declare "edt_pass" on a separate line.(ŸŞù¨ıÿÿÿÿ8ó‰Õœ/

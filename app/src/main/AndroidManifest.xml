@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.loginpage">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LoginPage">
+        <activity android:name=".ui.ForgotPasswordActivity"></activity>
+        <activity android:name=".DownloadMarks" />
+        <activity android:name=".DownloadQuiz" />
+        <activity android:name=".AddQuiz" />
+        <activity android:name=".ViewMarks" />
+        <activity android:name=".AddMarks" />
+        <activity android:name=".StudentActivity" />
+        <activity android:name=".Attendance" />
+        <activity android:name=".DownloadFiles" />
+        <activity android:name=".DownloadAssignment" />
+        <activity android:name=".AddAssignment" />
+        <activity android:name=".Files" />
+        <activity android:name=".ui.Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Listview" />
+        <activity android:name=".Chat" />
+        <activity android:name=".TeacherDashBoard" />
+        <activity android:name=".StudentDashboard" />
+        <activity android:name=".ui.StudentSignup" />
+        <activity android:name=".ui.TeacherSignup" />
+        <activity android:name=".ui.StudentLogin" />
+        <activity android:name=".ui.TeacherLogin" />
+        <activity android:name=".ui.MainActivity" />
+    </application>
+
+</manifest>

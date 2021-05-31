@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="spinner1" type="id" />
+    <item name="spinnerSE" type="id" />
+    <item name="spinneryear" type="id" />
+    <item name="DateEditText" type="id" />
+    <item name="DateImageButton" type="id" />
+    <item name="buttonsubmit" type="id" />
+</resources>
