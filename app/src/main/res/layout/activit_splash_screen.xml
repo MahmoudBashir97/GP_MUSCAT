@@ -5,4 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.Splashscreen">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo_c"
+        android:layout_margin="50dp"/>
 </RelativeLayout>

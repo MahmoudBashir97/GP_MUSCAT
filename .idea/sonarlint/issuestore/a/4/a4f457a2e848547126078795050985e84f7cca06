@@ -1,22 +1,22 @@
 
+B
+java:S16120",Replace this lambda with a method reference.(¶Ä€Ÿ
+m
+java:S1450"WRemove the "position" field and declare it as a local variable in the relevant methods.(Þö¨“
 V	java:S110"<This class has 9 parents which is greater than 5 authorized.(Øåùîÿÿÿÿÿ
 I
 java:S1128".Remove this unused import 'android.view.View'.(Ø½­äþÿÿÿÿ
-r
-java:S1450"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼
-m
-java:S1450"WRemove the "position" field and declare it as a local variable in the relevant methods.(Þö¨“
-v
-java:S1450"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(¿á© ýÿÿÿÿ
-B
-java:S16120",Replace this lambda with a method reference.(¶Ä€Ÿ
-S
-java:S1854H"8Remove this useless assignment to local variable "save".(˜ Ñ·ýÿÿÿÿ
-G
-java:S1612P",Replace this lambda with a method reference.(Îúò­üÿÿÿÿ
 B
 java:S1612`",Replace this lambda with a method reference.(Ì¢úÆ
+v
+java:S1450"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(¿á© ýÿÿÿÿ
+S
+java:S1854H"8Remove this useless assignment to local variable "save".(˜ Ñ·ýÿÿÿÿ
 D
 java:S1481H")Remove this unused "save" local variable.(˜ Ñ·ýÿÿÿÿ
+r
+java:S1450"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼
+G
+java:S1612P",Replace this lambda with a method reference.(Îúò­üÿÿÿÿ
 B
 java:S1068",Remove this unused "position" private field.(Þö¨“
