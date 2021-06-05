@@ -1,21 +1,21 @@
 
-~	java:S116"]Rename this field "student_signup_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É‰É¹ÿÿÿÿÿ8û„÷ÿ›/
 m	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œü–á8Ô±òœ/
-t
-java:S3776P"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(İ‰ä›ÿÿÿÿÿ8¤§¦•œ/
 H
 java:S1659"&Declare "edt_pass" on a separate line.(Éª ÿÿÿÿÿ8åºœ/
-R
-java:S1659"0Declare "student_signup_btn" on a separate line.(É‰É¹ÿÿÿÿÿ8û„÷ÿ›/
-Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(û‡·õ
-}	java:S116"\Rename this field "student_login_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É‰É¹ÿÿÿÿÿ8û„÷ÿ›/
-m	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôî¢Ò8Ô±òœ/
-n	java:S116!"RRename this field "pro_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Ëä‡8è‰…‚œ/
-u	java:S116"TRename this field "edt_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éª ÿÿÿÿÿ8åºœ/
-N
-java:S1602?",Remove useless curly braces around statement(†Á§ıøÿÿÿÿ8Ÿ¥•œ/
-z	java:S116"YRename this field "txt_forgot_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÁâïÿÿÿÿÿ8ğÄ£•œ/
-m	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ÃŒĞ8¤§¦•œ/
 t	java:S116"SRename this field "edt_pass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éª ÿÿÿÿÿ8åºœ/
 I
 java:S16025",Remove useless curly braces around statement(‡÷éõ8áéúÿ›/
+~	java:S116"]Rename this field "student_signup_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É‰É¹ÿÿÿÿÿ8û„÷ÿ›/
+t
+java:S3776P"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(İ‰ä›ÿÿÿÿÿ8¤§¦•œ/
+z	java:S116"YRename this field "txt_forgot_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÁâïÿÿÿÿÿ8ğÄ£•œ/
+R
+java:S1659"0Declare "student_signup_btn" on a separate line.(É‰É¹ÿÿÿÿÿ8û„÷ÿ›/
+u	java:S116"TRename this field "edt_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éª ÿÿÿÿÿ8åºœ/
+N
+java:S1602?",Remove useless curly braces around statement(†Á§ıøÿÿÿÿ8Ÿ¥•œ/
+m	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôî¢Ò8Ô±òœ/
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(û‡·õ
+}	java:S116"\Rename this field "student_login_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É‰É¹ÿÿÿÿÿ8û„÷ÿ›/
+m	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ÃŒĞ8¤§¦•œ/
+n	java:S116!"RRename this field "pro_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Ëä‡8è‰…‚œ/

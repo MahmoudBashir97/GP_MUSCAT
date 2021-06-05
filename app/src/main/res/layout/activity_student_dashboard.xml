@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StudentDashboard"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +40,7 @@
             android:rowCount="3">
 
             <androidx.cardview.widget.CardView
-
+                android:id="@+id/student_to_chat_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -75,7 +76,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-
+                android:id="@+id/student_to_attendance_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -111,7 +112,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-
+                android:id="@+id/student_to_files_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -146,7 +147,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-
+                android:id="@+id/student_to_quiz_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -183,7 +184,42 @@
 
 
         </GridLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logout_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:layout_gravity="center_horizontal">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_baseline_exit_to_app_24"
+                    app:tint="@color/black"
+                    android:rotation="180"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Logout"
+                    android:textColor="#673AB7"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
