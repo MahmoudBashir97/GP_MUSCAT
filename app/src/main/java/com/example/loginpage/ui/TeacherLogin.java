@@ -90,11 +90,12 @@ public class TeacherLogin extends AppCompatActivity {
                             String _email = sn.child("email").getValue().toString();
                             String _pass = sn.child("password").getValue().toString();
                             String _name = sn.child("name").getValue().toString();
+                            String _id = sn.child("id").getValue().toString();
 
                             if (email.equals(_email) && pass.equals(_pass)){
                                 pro_bar.setVisibility(View.GONE);
                                 navigateToDashboard();
-                                SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("doctor",_name,_email);
+                                SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("doctor",_name,_email,_id);
                             }else {
                                 edt_email.setError("Invalid Inputs,Please enter a registered email!");
                                 edt_pass.setError("Invalid Inputs,Please enter a registered password!");

@@ -10,11 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
-import com.example.loginpage.StudentDashboard;
 import com.example.loginpage.models.User_Data_Model;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -96,7 +94,7 @@ public class StudentSignup extends AppCompatActivity {
                 if (task.isSuccessful()){
                     pro_bar.setVisibility(View.GONE);
                     navigateToDashboard();
-                    SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("student",model.getName(),model.getEmail());
+                    SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("student",model.getName(),model.getEmail(),model.getId());
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

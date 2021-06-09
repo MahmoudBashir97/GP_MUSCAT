@@ -95,7 +95,7 @@ public class TeacherSignup extends AppCompatActivity {
                 if (task.isSuccessful()){
                     pro_bar.setVisibility(View.GONE);
                     navigateToDashboard();
-                    SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("doctor",model.getName(),model.getEmail());
+                    SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("doctor",model.getName(),model.getEmail(),model.getId());
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

@@ -8,7 +8,6 @@ import android.widget.Button;
 
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
-import com.example.loginpage.StudentDashboard;
 import com.example.loginpage.TeacherDashBoard;
 
 public class MainActivity extends AppCompatActivity {

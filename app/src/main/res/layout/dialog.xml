@@ -7,8 +7,6 @@
     app:cardCornerRadius="8dp"
     >
 
-
-
     <LinearLayout
         android:padding="16dp"
         android:orientation="vertical"
@@ -45,6 +43,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="edt02"
+            android:layout_margin="8dp"
+            />
+
+        <EditText
+            android:id="@+id/ed03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="edt03"
             android:layout_margin="8dp"
             />
 

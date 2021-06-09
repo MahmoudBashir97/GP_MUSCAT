@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
-import com.example.loginpage.StudentDashboard;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -88,11 +87,12 @@ public class StudentLogin extends AppCompatActivity {
                             String _email = sn.child("email").getValue().toString();
                             String _pass = sn.child("password").getValue().toString();
                             String _name = sn.child("name").getValue().toString();
+                            String _id = sn.child("id").getValue().toString();
 
                             if (email.equals(_email) && pass.equals(_pass)){
                                 pro_bar.setVisibility(View.GONE);
                                 navigateToDashboard();
-                               SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("student",_name,_email);
+                               SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("student",_name,_email,_id);
                             }else {
                                 edt_email.setError("Invalid Inputs,Please enter a registered email!");
                                 edt_pass.setError("Invalid Inputs,Please enter a registered password!");

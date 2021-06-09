@@ -18,7 +18,6 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ClassViewHol
     private OnItemClickListener onItemClickListener;
     public interface OnItemClickListener{
         void onClick(int position);
-
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -49,8 +48,6 @@ TextView CourseName;
     public ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.class_item,parent,false);
         return new ClassViewHolder(itemView,onItemClickListener);
-
-
 
     }
 

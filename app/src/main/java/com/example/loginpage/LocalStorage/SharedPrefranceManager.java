@@ -22,7 +22,7 @@ public class SharedPrefranceManager {
 
 
     //--------------- user -------------//
-    public void saveUser(String regist_type,String name,String email) {
+    public void saveUser(String regist_type,String name,String email,String id) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_USER, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -31,6 +31,7 @@ public class SharedPrefranceManager {
         editor.putString("RegistType", regist_type);
         editor.putString("UserName", name);
         editor.putString("UserEmail", email);
+        editor.putString("UserId", id);
 
 
         editor.putBoolean("userLogged", true);
@@ -41,6 +42,10 @@ public class SharedPrefranceManager {
     public String getRegist_Type(){
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_USER, Context.MODE_PRIVATE);
         return sharedPreferences.getString("RegistType", "");
+    }
+    public String getUser_ID(){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_USER, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("UserId", "");
     }
 
     public String getUser_Name(){
