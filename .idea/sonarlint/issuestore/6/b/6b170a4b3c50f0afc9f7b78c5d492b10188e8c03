@@ -1,18 +1,6 @@
 
-Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(¦«Ö
->
-java:S16046"(Make this anonymous inner class a lambda(‡ƒËµ
-u
-java:S1450 "ZRemove the "chatHistory" field and declare it as a local variable in the relevant methods.(¨¯õŒüÿÿÿÿ
-q
-java:S1450"VRemove the "sendBtn" field and declare it as a local variable in the relevant methods.(æ—ˆúÿÿÿÿ
-X
-java:S18542"=Remove this useless assignment to local variable "container".(¿­õüÿÿÿÿ
-Q
-java:S18540";Remove this useless assignment to local variable "meLabel".(Èç‚Œ
-o
-java:S2293W"YReplace the type specification in this constructor call with the diamond operator ("<>").(”Êæã
-B
-java:S14810",Remove this unused "meLabel" local variable.(Èç‚Œ
-I
-java:S14812".Remove this unused "container" local variable.(¿­õüÿÿÿÿ
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(¦«Ö
+w
+java:S1450"URemove the "tablay" field and declare it as a local variable in the relevant methods.(­”²ûÿÿÿÿ8ºóÜŸ/
+z
+java:S1450"XRemove the "viewPager" field and declare it as a local variable in the relevant methods.(åÙ¬Ïûÿÿÿÿ8¦‡ŞŸ/

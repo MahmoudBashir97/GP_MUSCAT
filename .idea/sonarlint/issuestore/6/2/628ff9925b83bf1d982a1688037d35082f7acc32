@@ -1,10 +1,10 @@
 
-’
-java:S1319"wThe type of the "chatMessages" object should be an interface such as "List" rather than the implementation "ArrayList".(ÌÓú–ùÿÿÿÿ
-R
-java:S1128"7Remove this unused import 'android.widget.BaseAdapter'.(ŒŸà“ýÿÿÿÿ
 œ
 java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¤àÈÌþÿÿÿÿ
+’
+java:S1319"wThe type of the "chatMessages" object should be an interface such as "List" rather than the implementation "ArrayList".(ÌÓú–ùÿÿÿÿ
+c	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ÌÓú–ùÿÿÿÿ
+R
+java:S1128"7Remove this unused import 'android.widget.BaseAdapter'.(ŒŸà“ýÿÿÿÿ
 —
 java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(É›ù×
-c	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ÌÓú–ùÿÿÿÿ

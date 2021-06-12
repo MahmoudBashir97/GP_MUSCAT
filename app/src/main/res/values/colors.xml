@@ -10,6 +10,11 @@
     <color name="Present">#3300C500</color>
     <color name="Absent">#33FF0000</color>
     <color name="normal">#FFFFFF</color>
+    <color name="colorPrimary">#1f94ca</color>
+    <color name="colorPrimaryDark">#1f94ca</color>
+    <color name="Tabtext">#fff</color>
+    <color name="tabindicatorcolor">#2d2d2d</color>
+    <color name="main_color">#FF6200EE</color>
 
 
 </resources>

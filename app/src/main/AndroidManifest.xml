@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginPage">
-        <activity android:name=".ui.StudentAttendance_Activity"></activity>
+        <activity android:name=".ui.MessagesChat_Activity"></activity>
+        <activity android:name=".ui.StudentAttendance_Activity" />
         <activity android:name=".ui.Student_Profile_Activity2" />
         <activity android:name=".ui.ForgotPasswordActivity" />
         <activity android:name=".DownloadMarks" />

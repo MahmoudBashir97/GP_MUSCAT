@@ -1,6 +1,8 @@
 package com.example.loginpage.models;
 
-public class User_Data_Model {
+import java.io.Serializable;
+
+public class User_Data_Model implements Serializable {
     String id;
     String name;
     String email;
