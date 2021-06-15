@@ -1,63 +1,63 @@
 
-F
-java:S1604¬"(Make this anonymous inner class a lambda(£¬²æ8™¼ñ/
-J
-java:S1481’",Remove this unused "dateStr" local variable.(¡ı‰Ğ8™¼ñ/
-g
-java:S1128"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ8‰Ğç/
-O
-java:S1659*"2Declare "rec_studentsAttendee" on a separate line.(‹ãöÊ8ÒÍ¹ñ/
-F
-java:S1604è"(Make this anonymous inner class a lambda(ËŠÁù8™¼ñ/
-y	java:S1161"XRename this field "doctorAtt_Ref" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜èÄøÿÿÿÿ8Ù¼²é/
-I
-java:S1068)",Remove this unused "position" private field.(Şö¨“8ğÀÓò/
-N
-java:S1068-"1Remove this unused "layoutManager" private field.(üÉÙ¼8îáºñ/
-K
-java:S1604ß"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ8™¼ñ/
-a
-java:S1155Ÿ">Use isEmpty() to check whether the collection is empty or not.(­•¶ıüÿÿÿÿ8ğÀÓò/
-F
-java:S1604µ"(Make this anonymous inner class a lambda(ËŠÁù8™¼ñ/
-t
-java:S3776J"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(íä…Ğûÿÿÿÿ8Ÿ™³ñ/
-o
-java:S1128"MRemove this unused import 'androidx.recyclerview.widget.LinearLayoutManager'.(ôœ¹ºıÿÿÿÿ8îáºñ/
-K
-java:S1604Î"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ8™¼ñ/
-I
-java:S1612z",Replace this lambda with a method reference.(¶Ä€Ÿ8ğÀÓò/
-f
-java:S1192U"IDefine a constant instead of duplicating this literal "Students" 4 times.(ªÆûÃ8É€ôğ/
-K
-java:S1604Ä"(Make this anonymous inner class a lambda(µÅ¦ìÿÿÿÿÿ8™¼ñ/
 h
 java:S1192A"KDefine a constant instead of duplicating this literal "Attendance" 3 times.(ïµ¿²8Ã¿÷ï/
-R
-java:S1128"5Remove this unused import 'java.text.ParseException'.(ñ®ï•8üĞûŞ/
-V	java:S110$"<This class has 9 parents which is greater than 5 authorized.(Øåùîÿÿÿÿÿ
-N
-java:S16591",Declare "studentAtt_Ref" on a separate line.(˜èÄøÿÿÿÿ8‰˜¿á/
-m
-java:S1450)"WRemove the "position" field and declare it as a local variable in the relevant methods.(Şö¨“
-}	java:S116/"\Rename this field "student_attendees" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÏ¨¯ÿÿÿÿÿ8÷¬”ñ/
-J
-java:S1612ƒ",Replace this lambda with a method reference.(õÆÑ¾8ğÀÓò/
-V
-java:S1117‡"8Rename "myId" which hides the field declared at line 50.(¥¤Óµ8™¼ñ/
 
 java:S1488•"bImmediately return this expression instead of assigning it to the temporary variable "newDateStr".(©»[8™¼ñ/
+N
+java:S16591",Declare "studentAtt_Ref" on a separate line.(˜èÄøÿÿÿÿ8‰˜¿á/
+a
+java:S1155Ÿ">Use isEmpty() to check whether the collection is empty or not.(­•¶ıüÿÿÿÿ8ğÀÓò/
+o
+java:S1128"MRemove this unused import 'androidx.recyclerview.widget.LinearLayoutManager'.(ôœ¹ºıÿÿÿÿ8îáºñ/
+V
+java:S1117‡"8Rename "myId" which hides the field declared at line 50.(¥¤Óµ8™¼ñ/
+t
+java:S3776J"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(íä…Ğûÿÿÿÿ8Ÿ™³ñ/
+}	java:S116/"\Rename this field "student_attendees" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÏ¨¯ÿÿÿÿÿ8÷¬”ñ/
+K
+java:S1604ß"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ8™¼ñ/
 {	java:S116*"_Rename this field "rec_studentsAttendee" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ãöÊ8ÒÍ¹ñ/
-q
-java:S1450*"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(‹ãöÊ
+K
+java:S1604Î"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ8™¼ñ/
+J
+java:S1481’",Remove this unused "dateStr" local variable.(¡ı‰Ğ8™¼ñ/
+Y
+java:S1854’";Remove this useless assignment to local variable "dateStr".(¡ı‰Ğ8™¼ñ/
+F
+java:S1604¬"(Make this anonymous inner class a lambda(£¬²æ8™¼ñ/
+y	java:S1161"XRename this field "doctorAtt_Ref" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜èÄøÿÿÿÿ8Ù¼²é/
+R
+java:S1128"5Remove this unused import 'java.text.ParseException'.(ñ®ï•8üĞûŞ/
+O
+java:S1659*"2Declare "rec_studentsAttendee" on a separate line.(‹ãöÊ8ÒÍ¹ñ/
+m
+java:S1450)"WRemove the "position" field and declare it as a local variable in the relevant methods.(Şö¨“
+N
+java:S1068-"1Remove this unused "layoutManager" private field.(üÉÙ¼8îáºñ/
+I
+java:S1068)",Remove this unused "position" private field.(Şö¨“8ğÀÓò/
+F
+java:S1604è"(Make this anonymous inner class a lambda(ËŠÁù8™¼ñ/
+V	java:S110$"<This class has 9 parents which is greater than 5 authorized.(Øåùîÿÿÿÿÿ
 z	java:S1161"YRename this field "studentAtt_Ref" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜èÄøÿÿÿÿ8‰˜¿á/
+f
+java:S1192U"IDefine a constant instead of duplicating this literal "Students" 4 times.(ªÆûÃ8É€ôğ/
+g
+java:S1128"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ8‰Ğç/
+I
+java:S1612z",Replace this lambda with a method reference.(¶Ä€Ÿ8ğÀÓò/
+J
+java:S1612ƒ",Replace this lambda with a method reference.(õÆÑ¾8ğÀÓò/
+F
+java:S1604µ"(Make this anonymous inner class a lambda(ËŠÁù8™¼ñ/
+y	java:S116,"]Rename this field "st_attendeeAdapter" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ù é8œÔ½ò/
 O
 java:S1612",Replace this lambda with a method reference.(Îúò­üÿÿÿÿ8™¼ñ/
 g
 java:S1192L"JDefine a constant instead of duplicating this literal "Lecturers" 6 times.(é­úı8É€ôğ/
 L
 java:S16591"*Declare "lecturersRef" on a separate line.(˜èÄøÿÿÿÿ8÷íöï/
-Y
-java:S1854’";Remove this useless assignment to local variable "dateStr".(¡ı‰Ğ8™¼ñ/
-y	java:S116,"]Rename this field "st_attendeeAdapter" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ù é8œÔ½ò/
+K
+java:S1604Ä"(Make this anonymous inner class a lambda(µÅ¦ìÿÿÿÿÿ8™¼ñ/
+q
+java:S1450*"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(‹ãöÊ

@@ -1,19 +1,0 @@
-
-m	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼â«“8¨•Žíž/
-N
-java:S16128",Replace this lambda with a method reference.(À–§áùÿÿÿÿ8ûžæòž/
-O
-java:S1128
-"4Remove this unused import 'android.database.Cursor'.(ŽÔäåúÿÿÿÿ
-y	java:S116"XRename this field "rec_lecturers" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•æ±ºùÿÿÿÿ8È™Ïêž/
-o
-java:S1128"MRemove this unused import 'androidx.recyclerview.widget.LinearLayoutManager'.(ôœ¹ºýÿÿÿÿ8Ñ”Òêž/
-M
-java:S1659"+Declare "rec_lecturers" on a separate line.(•æ±ºùÿÿÿÿ8È™Ïêž/
-I
-java:S1612;",Replace this lambda with a method reference.(¥çÝÃ8‹ê‹íž/
-V	java:S110"<This class has 9 parents which is greater than 5 authorized.(€‚ÒÍýÿÿÿÿ
-m	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼â«“8¨•Žíž/
-}	java:S116 "\Rename this field "doctorAtt_adapter" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßá“ýÿÿÿÿ8í£©ìž/
-N
-java:S1612|",Replace this lambda with a method reference.(äè×Òøÿÿÿÿ8ÇÀ™ìž/

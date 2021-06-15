@@ -1,6 +1,6 @@
 
 Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(¦«Ö
-w
-java:S1450"URemove the "tablay" field and declare it as a local variable in the relevant methods.(­”²ûÿÿÿÿ8ºóÜŸ/
 z
 java:S1450"XRemove the "viewPager" field and declare it as a local variable in the relevant methods.(åÙ¬Ïûÿÿÿÿ8¦‡ŞŸ/
+w
+java:S1450"URemove the "tablay" field and declare it as a local variable in the relevant methods.(­”²ûÿÿÿÿ8ºóÜŸ/

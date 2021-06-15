@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.loginpage.Inter_faces.chatListOnCLickInterface;
 import com.example.loginpage.R;
 import com.example.loginpage.models.User_Data_Model;
 

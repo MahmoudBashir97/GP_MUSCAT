@@ -59,7 +59,7 @@ public class TeacherDashBoard extends AppCompatActivity {
     }
     private void navToQuizActivity(){
         teacher_to_quiz_btn.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(),DownloadQuiz.class));
+            startActivity(new Intent(getApplicationContext(),AddAssignment.class));
         });
     }
 }

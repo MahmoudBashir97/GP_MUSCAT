@@ -122,15 +122,11 @@ public class Attendance extends AppCompatActivity {
      MyDialog dialog = new MyDialog();
      dialog.show(getSupportFragmentManager(),MyDialog.CLASS_ADD_DIALOG);
      dialog.setListener((className,courseName)->addClass(className,courseName));
-
-
     }
 
     private void addClass(String className,String courseName) {
         ClassItem classItem =new ClassItem(className,courseName);
          classItems.add(classItem);
          classAdapter.notifyDataSetChanged();
-
-
     }
 }

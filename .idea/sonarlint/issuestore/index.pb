@@ -1,10 +1,6 @@
 
-i
-9app/src/main/java/com/example/loginpage/DownloadQuiz.java,f\2\f22d8be975210c40648b928366685cbabde5230b
 j
 :app/src/main/java/com/example/loginpage/DownloadFiles.java,d\a\da965337a37bb23cd8b1fc7e6ccfd56ab249a028
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 l
 <app/src/main/java/com/example/loginpage/StudentActivity.java,a\4\a4f457a2e848547126078795050985e84f7cca06
 €
@@ -21,8 +17,6 @@ l
 <app/src/main/java/com/example/loginpage/ui/MainActivity.java,4\7\47d6f72167c0d216770b47dc621be87ac7254f9f
 l
 <app/src/main/java/com/example/loginpage/ui/StudentLogin.java,1\7\17cab6d1fef7dac7188b3ce49fdafb343d3b33d2
-l
-<app/src/main/java/com/example/loginpage/ui/TeacherLogin.java,9\8\989dfd5bcd2cf87f1095c47d7fb520926eb364e5
 L
 .idea/dictionaries/sheri.xml,a\d\ad385b648acee031593d1b278b2054c043c65b7b
 X
@@ -50,14 +44,10 @@ v
 Fapp/src/main/java/com/example/loginpage/ui/ForgotPasswordActivity.java,e\2\e238da3134a2b59bac5d81a56b11b787c0bc6f8b
 n
 >app/src/main/java/com/example/loginpage/ActionBarActivity.java,2\6\269c6c133f214c751f5c6b8551bb488a3d6c1c2f
-j
-:app/src/main/java/com/example/loginpage/AddAssignment.java,c\4\c42ac6322b2cecac7cded64cf4864f4fb608f3dd
 e
 5app/src/main/java/com/example/loginpage/AddMarks.java,7\1\7199c1d1a135e0bc291437dd58783d53879b2322
 d
 4app/src/main/java/com/example/loginpage/AddQuiz.java,9\8\98439194d449d86ed4b55643366e07acf7934ebb
-g
-7app/src/main/java/com/example/loginpage/Attendance.java,5\7\57ac6d4c62bf7ad654b2c9bfd4951603ab8169ec
 a
 1app/src/main/java/com/example/loginpage/Chat.java,6\b\6b170a4b3c50f0afc9f7b78c5d492b10188e8c03
 h
@@ -78,10 +68,6 @@ b
 2app/src/main/java/com/example/loginpage/Files.java,f\f\ffa379b5e2d25a2c4891f08ee35eccfa4a2e5274
 e
 5app/src/main/java/com/example/loginpage/Listview.java,9\0\90aec06c7839075161a8297c8106db31350c06c3
-e
-5app/src/main/java/com/example/loginpage/MyDialog.java,b\0\b0656e65bc82f6ef0bb4332f74a4266631734fd4
-m
-=app/src/main/java/com/example/loginpage/TeacherDashBoard.java,7\e\7e7c9f340bd9666b6da1249516a240781c614771
 f
 6app/src/main/java/com/example/loginpage/ViewMarks.java,4\f\4fdd47bbf2990cd7486beeac99db887aab133c00
 W
@@ -110,8 +96,6 @@ h
 8app/src/main/res/drawable-v24/ic_launcher_foreground.xml,0\7\078508c831007ccb3938b355f0d30a8368f99a8d
 W
 'app/src/main/res/drawable-v24/login.xml,0\d\0da206d334cc552a206dcb833e2ac116ac7fb6b3
-c
-3app/src/main/res/layout/activity_add_assignment.xml,1\1\11658e1a3bee3fe51d123f13d8103cc29acd9cc2
 ^
 .app/src/main/res/layout/activity_add_marks.xml,3\b\3bde9e0d50652f160c858eba73508d8e4de71ea7
 ]
@@ -122,10 +106,6 @@ c
 3app/src/main/res/layout/activity_download_files.xml,e\c\ecff1f9dfeb782bfce6b760e351c23721f4a17d1
 c
 3app/src/main/res/layout/activity_download_marks.xml,e\4\e4f4cbcc20dcd55cb094d87a1fcd80bfeb1fd565
-b
-2app/src/main/res/layout/activity_download_quiz.xml,6\1\6169fbc8ef986b6b090be4e5f1fbb294be5ec322
-Z
-*app/src/main/res/layout/activity_files.xml,2\9\2906ac05190f46e798e30d39138ba2abd7600f7c
 ]
 -app/src/main/res/layout/activity_listview.xml,9\c\9c8474722aa5bba4aff2d84a7d01fe21a59c0c51
 Y
@@ -146,8 +126,6 @@ O
 app/src/main/res/values/ids.xml,b\d\bd506d672607407c2d0357a9f7c1e4e7fdb6c3ad
 >
 app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
 F
@@ -156,10 +134,6 @@ a
 1app/src/main/res/layout/activit_splash_screen.xml,4\7\4769b60b7788de66eee03d22c7095e8014074133
 d
 4app/src/main/res/layout/activity_forgot_password.xml,e\3\e346422b367cb5b302d7197938b3058b31eacb87
-R
-"app/src/main/res/values/themes.xml,e\b\eb7f0f821bde169dd21862705b2b042d2cea69a3
-X
-(app/src/main/res/values-night/themes.xml,8\c\8c3a6b96d9ffba496992e612d58227c19e6b9e65
 b
 2app/src/main/res/values/ic_launcher_background.xml,1\8\18ccc38e5dffe10da3d8b454d3093a0a4ba78749
 b
@@ -186,8 +160,6 @@ y
 Iapp/src/main/java/com/example/loginpage/ui/Student_Profile_Activity2.java,5\9\5949798e4c2d015336d0406e10fc8829c1b2f245
 z
 Japp/src/main/java/com/example/loginpage/ui/StudentAttendance_Activity.java,d\1\d1165c13e1ed7e6ac22cf813e336265dd3ecca1c
-p
-@app/src/main/java/com/example/loginpage/ui/StudentDashboard.java,6\d\6de7ba008c356ee1b4b74a3b443cf5e07a87faa9
 c
 3app/src/main/res/drawable/ic_baseline_person_24.xml,4\1\41474d0e7cd0982517cb605993d916d4e0f31a17
 g
@@ -196,8 +168,6 @@ h
 8app/src/main/res/layout/activity_student_attendance_.xml,8\7\87ef324a37d059161d74b70eafeb4d9e7a44e0a2
 f
 6app/src/main/res/layout/activity_student_dashboard.xml,a\0\a009701d5cd6212e7cad1e7f2a4c6c740ce93055
-g
-7app/src/main/res/layout/activity_teacher_dash_borad.xml,d\3\d36907d5abe83eb516ec09e2fc4f5e4a864b8f55
 R
 "app/src/main/res/layout/dialog.xml,1\1\115456bb68cac2a1a19c026e5ab19841c4599c0f
 j
@@ -212,3 +182,35 @@ Lapp/src/main/java/com/example/loginpage/fragments/StudentsList_Fragment.java,4
 Kapp/src/main/java/com/example/loginpage/fragments/DoctorsList_Fragment.java,5\0\501cb994e27c76063d23de81fbde52fee9b1e4d2
 u
 Eapp/src/main/java/com/example/loginpage/adapters/ViewpageAdapter.java,4\5\45ac565faf633b1b4aef24905b438dd86bf51de5
+t
+Dapp/src/main/java/com/example/loginpage/adapters/MessageAdapter.java,e\b\eb97dd67025e1b306b27d3b5b8e26b308b804996
+l
+<app/src/main/java/com/example/loginpage/models/Messages.java,f\7\f7de54e8be6b4a9df84947e1668db5745e8631bb
+u
+Eapp/src/main/java/com/example/loginpage/ui/MessagesChat_Activity.java,5\5\55b951e85d5c95c8bc49b560d9a492d62e4b87d1
+t
+Dapp/src/main/res/drawable-v24/ic_baseline_keyboard_arrow_left_24.xml,2\1\210c41261b1f79c61e3bc52ac290a8725fc4e7b3
+m
+=app/src/main/res/drawable-v24/ic_baseline_photo_camera_24.xml,5\4\54f9bbc99190d3e900ad31a2fe15824f1db7c3e0
+e
+5app/src/main/res/drawable-v24/ic_baseline_send_24.xml,4\c\4c159b8df6cbe047d2ed498a7400e1f6ff233b9a
+e
+5app/src/main/res/drawable-v24/ic_reciever_message.xml,8\1\818485260a23f6940154b71651691c597ff766a9
+^
+.app/src/main/res/drawable-v24/ic_user_icon.xml,b\2\b26bb62ad23002ad2c9deb08f352249cd4b4bc4a
+`
+0app/src/main/res/drawable-v24/sender_message.xml,e\e\ee8423183abf9271ea42d318553abeb823a158d6
+Y
+)app/src/main/res/layout/activity_chat.xml,b\c\bc2064ca34065127bf1c46722a9b35f9b78bcca3
+b
+2app/src/main/res/layout/fragment_doctors_list_.xml,e\0\e0e7a771428c886112656a312909f85bcb452208
+c
+3app/src/main/res/layout/fragment_students_list_.xml,3\5\3554de6f99bd7700cde201b1749f06b4a608edf3
+^
+.app/src/main/res/layout/single_item_chats_.xml,2\c\2c9b8fee03fce3ba9d1896e61086e55d0a3fbc12
+d
+4app/src/main/res/layout/single_item_request_chat.xml,a\5\a5efd3a4967535fad665acae075274e1c1a4a586
+R
+"app/src/main/res/values/colors.xml,9\6\969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
+S
+#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e

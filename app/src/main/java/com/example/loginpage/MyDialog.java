@@ -19,6 +19,7 @@ import androidx.fragment.app.DialogFragment;
 
 public class MyDialog extends DialogFragment{
     public static final String CLASS_ADD_DIALOG="addClass";
+    public static final String CLASS_ADD_ASSIGNMENT="addAssignment";
     public static final String STUDENT_ADD_DIALOG="addStudent";
 
     private  OnClickListener listener;
@@ -45,10 +46,47 @@ public class MyDialog extends DialogFragment{
         Dialog dialog=null;
         if (getTag().equals(CLASS_ADD_DIALOG))dialog=getAddClassDialog();
         if (getTag().equals(STUDENT_ADD_DIALOG))dialog=getAddStudentDialog();
+        if (getTag().equals(CLASS_ADD_ASSIGNMENT))dialog=getAddAssignmentDialog();
+
 
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
         return dialog;
+    }
+
+    private Dialog getAddAssignmentDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog,null);
+
+        builder.setView(view);
+
+        TextView title = view.findViewById(R.id.TitleDialog);
+        title.setText("Add New Assignment Data");
+
+        EditText class_edt = view.findViewById(R.id.edt01);
+        EditText course_edt = view.findViewById(R.id.ed02);
+        EditText edt03 = view.findViewById(R.id.ed03);
+        edt03.setVisibility(View.GONE);
+
+        class_edt.setHint("Class Name");
+        course_edt.setHint("Course Name");
+
+        Button cancel = view.findViewById(R.id.Cancel_btn);
+        Button add = view.findViewById(R.id.Add_btn);
+
+        cancel.setOnClickListener(v -> dismiss() );
+        add.setOnClickListener(v ->{
+            String className = class_edt.getText().toString();
+            String subName = course_edt.getText().toString();
+            if (TextUtils.isEmpty(className) || TextUtils.isEmpty(subName)){
+                Snackbar.make(v,"Please fill all required Fields!",500).show();
+            }else {
+                listener.onClick(className,subName);
+                dismiss();
+            }
+        });
+        return builder.create();
     }
 
     private Dialog getAddStudentDialog() {
