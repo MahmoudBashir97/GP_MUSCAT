@@ -10,11 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
-import com.example.loginpage.TeacherDashBoard;
 import com.example.loginpage.models.User_Data_Model;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;

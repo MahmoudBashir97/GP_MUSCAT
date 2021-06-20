@@ -23,12 +23,12 @@
         <activity android:name=".AddQuiz" />
         <activity android:name=".ViewMarks" />
         <activity android:name=".AddMarks" />
-        <activity android:name=".StudentActivity" />
+        <activity android:name=".ui.StudentActivity" />
         <activity android:name=".Attendance" />
         <activity android:name=".DownloadFiles" />
         <activity android:name=".DownloadAssignment" />
-        <activity android:name=".AddAssignment" />
-        <activity android:name=".Files" />
+        <activity android:name=".ui.AddAssignment" />
+        <activity android:name=".ui.Files" />
         <activity android:name=".ui.Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +38,7 @@
         </activity>
         <activity android:name=".Listview" />
         <activity android:name=".Chat" />
-        <activity android:name=".TeacherDashBoard" />
+        <activity android:name=".ui.TeacherDashBoard" />
         <activity android:name=".ui.StudentDashboard" />
         <activity android:name=".ui.StudentSignup" />
         <activity android:name=".ui.TeacherSignup" />

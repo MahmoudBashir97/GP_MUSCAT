@@ -6,14 +6,10 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.loginpage.Attendance;
 import com.example.loginpage.Chat;
 import com.example.loginpage.DownloadQuiz;
-import com.example.loginpage.Files;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
-import com.example.loginpage.ui.MainActivity;
-import com.example.loginpage.ui.Student_Profile_Activity2;
 
 public class StudentDashboard extends AppCompatActivity {
     private CardView student_to_chat_btn,student_to_files_btn,student_to_attendance_btn,student_to_quiz_btn,logout_btn,student_to_profile_btn;

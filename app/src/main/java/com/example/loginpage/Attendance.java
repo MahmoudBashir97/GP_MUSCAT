@@ -3,11 +3,9 @@ package com.example.loginpage;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -16,6 +14,7 @@ import android.widget.TextView;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.adapters.Adapter_doctorAttendance;
 import com.example.loginpage.models.StudentItem;
+import com.example.loginpage.ui.StudentActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -101,7 +100,7 @@ public class Attendance extends AppCompatActivity {
     }
 
     private void gotoItemActivity(int position) {
-        Intent intent = new Intent(this,StudentActivity.class);
+        Intent intent = new Intent(this, StudentActivity.class);
 
         intent.putExtra("className",classItems.get(position).getClassName());
         intent.putExtra("courseName",classItems.get(position).getCourseName());

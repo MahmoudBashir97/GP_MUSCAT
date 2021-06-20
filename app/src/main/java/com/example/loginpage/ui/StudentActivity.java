@@ -1,9 +1,8 @@
-package com.example.loginpage;
+package com.example.loginpage.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -15,19 +14,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
+import com.example.loginpage.MyDialog;
+import com.example.loginpage.R;
 import com.example.loginpage.adapters.StudentAdapter;
 import com.example.loginpage.adapters.StudentAttendee_Adapter;
 import com.example.loginpage.models.StudentItem;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;

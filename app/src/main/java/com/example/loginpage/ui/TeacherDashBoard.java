@@ -1,4 +1,4 @@
-package com.example.loginpage;
+package com.example.loginpage.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -6,8 +6,10 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.loginpage.Attendance;
+import com.example.loginpage.Chat;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
-import com.example.loginpage.ui.MainActivity;
+import com.example.loginpage.R;
 
 public class TeacherDashBoard extends AppCompatActivity {
 
@@ -42,7 +44,7 @@ public class TeacherDashBoard extends AppCompatActivity {
 
     private void navToChatActivity(){
         teacher_to_chat_btn.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(),Chat.class));
+            startActivity(new Intent(getApplicationContext(), Chat.class));
         });
     }
 
@@ -54,12 +56,12 @@ public class TeacherDashBoard extends AppCompatActivity {
 
     private void navTo_AttendanceActivity(){
         teacher_to_attendance_btn.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(),Attendance.class));
+            startActivity(new Intent(getApplicationContext(), Attendance.class));
         });
     }
     private void navToQuizActivity(){
         teacher_to_quiz_btn.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(),AddAssignment.class));
+            startActivity(new Intent(getApplicationContext(), AddAssignment.class));
         });
     }
 }

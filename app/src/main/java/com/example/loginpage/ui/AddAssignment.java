@@ -1,4 +1,4 @@
-package com.example.loginpage;
+package com.example.loginpage.ui;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.example.loginpage.Inter_faces.downloadQuiz_Interface;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
+import com.example.loginpage.MyDialog;
+import com.example.loginpage.R;
 import com.example.loginpage.adapters.assignment_Adapter;
 import com.example.loginpage.databinding.ActivityAddAssignmentBinding;
 import com.example.loginpage.models.AssignmentDataModel;
@@ -26,7 +28,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.loginpage.R;
-import com.example.loginpage.StudentActivity;
+import com.example.loginpage.ui.StudentActivity;
 import com.example.loginpage.models.StudentItem;
 
 import java.util.ArrayList;

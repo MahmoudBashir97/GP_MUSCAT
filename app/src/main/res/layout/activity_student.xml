@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StudentActivity">
+    tools:context=".ui.StudentActivity">
 
     <include
         android:id="@+id/toolbarStudent"
