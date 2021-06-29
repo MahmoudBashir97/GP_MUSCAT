@@ -26,13 +26,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.HashMap;
+
 public class TeacherLogin extends AppCompatActivity {
 
     Button teacher_signup_btn,teacher_login_btn;
     EditText edt_email,edt_pass;
     TextView txt_forgot_btn;
     FirebaseAuth auth;
-    DatabaseReference reference;
+    DatabaseReference reference,tokenRef;
     String randomKey="";
     ProgressBar pro_bar;
     String devicetoken="";
@@ -53,6 +55,7 @@ public class TeacherLogin extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         reference = FirebaseDatabase.getInstance().getReference("Registeration");
+        tokenRef = FirebaseDatabase.getInstance().getReference("Registeration");
 
 
         teacher_signup_btn.setOnClickListener(v ->{
@@ -97,7 +100,7 @@ public class TeacherLogin extends AppCompatActivity {
 
                             if (email.equals(_email) && pass.equals(_pass)){
                                 pro_bar.setVisibility(View.GONE);
-                                navigateToDashboard();
+
                                 FirebaseMessaging.getInstance().getToken().addOnCompleteListener(
                                         new OnCompleteListener<String>() {
                                             @Override
@@ -105,11 +108,14 @@ public class TeacherLogin extends AppCompatActivity {
                                                 if (task.isSuccessful()){
                                                      devicetoken=task.getResult();
                                                     SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("doctor",_name,_email,_id,devicetoken);
-
+                                                    HashMap<String,Object> map = new HashMap<>();
+                                                    map.put("deviceToken",devicetoken);
+                                                    tokenRef.child("Doctors").child(_id).updateChildren(map);
                                                 }
                                             }
                                         }
                                 );
+                                navigateToDashboard();
 
                             }else {
                                 edt_email.setError("Invalid Inputs,Please enter a registered email!");

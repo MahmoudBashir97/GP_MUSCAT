@@ -2,9 +2,17 @@ package com.example.loginpage.models;
 
 public class Messages {
 
-    private String From,Message,Type,to,messageID,time,date,name;
+    private String From,Message,Type,to,messageID,time,date,name,receiverToken;
 
     public Messages() {
+    }
+
+    public String getReceiverToken() {
+        return receiverToken;
+    }
+
+    public void setReceiverToken(String receiverToken) {
+        this.receiverToken = receiverToken;
     }
 
     public String getFrom() {

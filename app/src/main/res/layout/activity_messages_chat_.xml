@@ -27,6 +27,7 @@
                 android:layout_centerVertical="true" />
 
             <TextView
+                android:id="@+id/txt_destination_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Requests Chat"
@@ -43,6 +44,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/rel_bar"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 

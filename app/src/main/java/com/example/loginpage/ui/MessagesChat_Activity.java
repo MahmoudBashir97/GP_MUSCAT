@@ -77,6 +77,7 @@ public class MessagesChat_Activity extends AppCompatActivity {
         rootRef = FirebaseDatabase.getInstance().getReference("Messages");
         messageRefReceiver = FirebaseDatabase.getInstance().getReference("Messages");
 
+        chatBinding.txtDestinationName.setText(destination_name);
         createNotificationChannel();
 
         Calendar calendar=Calendar.getInstance();
@@ -226,6 +227,7 @@ public class MessagesChat_Activity extends AppCompatActivity {
             data.setName(SharedPrefranceManager.getInastance(getApplicationContext()).getUser_Name());
             data.setMessage(messageText);
             data.setMessageID(messagePushID);
+            data.setReceiverToken(SharedPrefranceManager.getInastance(getApplicationContext()).getDeviceToken());
 
             send stored_data = new send(userToken,data);
             Call<send> sendCall = api_interface.storedata(stored_data);

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,12 +26,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.HashMap;
+
 public class StudentLogin extends AppCompatActivity {
     Button student_login_btn,student_signup_btn;
     EditText edt_email,edt_pass;
     TextView txt_forgot_btn;
     FirebaseAuth auth;
-    DatabaseReference reference;
+    DatabaseReference reference,tokenRef;
     String randomKey="";
     ProgressBar pro_bar;
     String devicetoken = "";
@@ -52,6 +55,7 @@ public class StudentLogin extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         reference = FirebaseDatabase.getInstance().getReference("Registeration");
+        tokenRef = FirebaseDatabase.getInstance().getReference("Registeration");
 
         student_signup_btn.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(),StudentSignup.class));
@@ -95,19 +99,22 @@ public class StudentLogin extends AppCompatActivity {
 
                             if (email.equals(_email) && pass.equals(_pass)){
                                 pro_bar.setVisibility(View.GONE);
-                                navigateToDashboard();
                                 FirebaseMessaging.getInstance().getToken().addOnCompleteListener(
                                         new OnCompleteListener<String>() {
                                             @Override
                                             public void onComplete(@NonNull Task<String> task) {
                                                 if (task.isSuccessful()){
                                                     devicetoken=task.getResult();
-                                                    SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("doctor",_name,_email,_id,devicetoken);
-
+                                                    Log.d("tokenD :","token"+devicetoken);
+                                                    SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("student",_name,_email,_id,devicetoken);
+                                                    HashMap<String,Object> map = new HashMap<>();
+                                                    map.put("deviceToken",devicetoken);
+                                                    tokenRef.child("Students").child(_id).updateChildren(map);
                                                 }
                                             }
                                         }
                                 );
+                                navigateToDashboard();
                             }else {
                                 edt_email.setError("Invalid Inputs,Please enter a registered email!");
                                 edt_pass.setError("Invalid Inputs,Please enter a registered password!");
