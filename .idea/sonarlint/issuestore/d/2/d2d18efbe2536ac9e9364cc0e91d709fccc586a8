@@ -1,0 +1,11 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(΅ηΉ
+N
+java:S1602)",Remove useless curly braces around statement(…ιρ³ωÿÿÿÿ8€ψ /
+N
+java:S16594",Declare "txt_courseName" on a separate line.(Γ„ ®ύÿÿÿÿ8»§Òθ /
+H
+java:S16594"&Declare "txt_date" on a separate line.(Γ„ ®ύÿÿÿÿ8»§Òθ /
+y	java:S1164"XRename this field "txt_className" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Γ„ ®ύÿÿÿÿ8»§Òθ /
+z	java:S1164"YRename this field "txt_courseName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Γ„ ®ύÿÿÿÿ8»§Òθ /
+t	java:S1164"SRename this field "txt_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Γ„ ®ύÿÿÿÿ8»§Òθ /

@@ -22,7 +22,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class TeacherSignup extends AppCompatActivity {
@@ -33,6 +35,7 @@ public class TeacherSignup extends AppCompatActivity {
     DatabaseReference reference;
     String randomKey="";
     ProgressBar pro_bar;
+    String deviceToken="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +63,8 @@ public class TeacherSignup extends AppCompatActivity {
                         id,
                         name,
                         edt_email.getText().toString(),
-                        edt_pass.getText().toString()
+                        edt_pass.getText().toString(),
+                        ""
                 );
                 doSignup(model);
             }
@@ -93,7 +97,20 @@ public class TeacherSignup extends AppCompatActivity {
                 if (task.isSuccessful()){
                     pro_bar.setVisibility(View.GONE);
                     navigateToDashboard();
-                    SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("doctor",model.getName(),model.getEmail(),model.getId());
+                    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(
+                            new OnCompleteListener<String>() {
+                                @Override
+                                public void onComplete(@NonNull Task<String> task) {
+                                    if (task.isSuccessful()){
+                                        deviceToken=task.getResult();
+                                        HashMap<String,Object> map = new HashMap<>();
+                                        map.put("deviceToken",deviceToken);
+                                        reference.child("Doctors").child(model.getId()).updateChildren(map);
+                                        SharedPrefranceManager.getInastance(getApplicationContext()).saveUser("student",model.getName(),model.getEmail(),model.getId(),deviceToken);
+                                    }
+                                }
+                            }
+                    );
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

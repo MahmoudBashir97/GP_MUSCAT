@@ -7,15 +7,25 @@ public class User_Data_Model implements Serializable {
     String name;
     String email;
     String password;
+    String deviceToken;
 
-    public User_Data_Model(String id, String name, String email, String password) {
+    public User_Data_Model(String id, String name, String email, String password,String deviceToken) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.deviceToken = deviceToken;
     }
 
     public User_Data_Model() {
+    }
+
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
+    public void setDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
     }
 
     public String getId() {

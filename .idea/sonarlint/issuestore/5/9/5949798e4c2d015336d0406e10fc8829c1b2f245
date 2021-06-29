@@ -1,0 +1,11 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ø»¿Åýÿÿÿÿ
+C
+java:S1659"&Declare "txt_name" on a separate line.(â€Íù8Á¤ËÆž/
+D
+java:S1659"'Declare "txt_email" on a separate line.(â€Íù8Á¤ËÆž/
+m	java:S116"QRename this field "txt_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â€Íù8Á¤ËÆž/
+o	java:S116"SRename this field "txt_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â€Íù8Á¤ËÆž/
+p	java:S116"TRename this field "txt_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â€Íù8Á¤ËÆž/
+X
+java:S1117+"6Rename "id" which hides the field declared at line 18.(Þ¶Û—øÿÿÿÿ8óÇÌÆž/

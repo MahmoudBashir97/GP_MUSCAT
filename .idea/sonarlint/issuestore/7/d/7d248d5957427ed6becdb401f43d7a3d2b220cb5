@@ -1,0 +1,13 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(æšä¸ÿÿÿÿÿ
+c
+java:S1128"MRemove this unused import 'com.example.loginpage.models.AssignmentDataModel'.(ßÌßã
+G
+java:S1602*",Remove useless curly braces around statement(…éñ³ùÿÿÿÿ
+G
+java:S16595",Declare "txt_courseName" on a separate line.(Ã„ ®ýÿÿÿÿ
+A
+java:S16595"&Declare "txt_date" on a separate line.(Ã„ ®ýÿÿÿÿ
+r	java:S1165"XRename this field "txt_className" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã„ ®ýÿÿÿÿ
+s	java:S1165"YRename this field "txt_courseName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã„ ®ýÿÿÿÿ
+m	java:S1165"SRename this field "txt_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã„ ®ýÿÿÿÿ

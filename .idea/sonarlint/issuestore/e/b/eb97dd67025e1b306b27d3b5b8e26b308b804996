@@ -1,0 +1,37 @@
+
+X	java:S125Z"<This block of commented-out lines of code should be removed.(Ğ„çë8Èô„“ /
+s	java:S116i"WRename this field "lin_receiver" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¿‚Ú8øóú’ /
+S
+java:S1659h"6Declare "text_message_time_sender" on a separate line.(ˆØÙâ8øóú’ /
+v	java:S116h"ZRename this field "txt_sender_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØÙâ8øóú’ /
+U
+java:S1659h"8Declare "text_message_time_reciever" on a separate line.(ˆØÙâ8øóú’ /
+G
+java:S1659i"*Declare "lin_receiver" on a separate line.(µ¿‚Ú8øóú’ /
+	java:S116j"^Rename this field "prof_message_sender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜æùÄüÿÿÿÿ8øóú’ /
+	java:S116h"eRename this field "text_message_time_reciever" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØÙâ8øóú’ /
+q	java:S116i"URename this field "lin_sender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¿‚Ú8øóú’ /
+U
+java:S1659j"3Declare "prof_message_receiver" on a separate line.(˜æùÄüÿÿÿÿ8øóú’ /
+J
+java:S1659h"-Declare "txt_sender_name" on a separate line.(ˆØÙâ8øóú’ /
+t	java:S116"SRename this field "SenderID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıË‚­üÿÿÿÿ8ææğ’ /
+~	java:S116j"]Rename this field "sender_message_img" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜æùÄüÿÿÿÿ8øóú’ /
+R
+java:S1659j"0Declare "sender_message_img" on a separate line.(˜æùÄüÿÿÿÿ8øóú’ /
+	java:S116h"cRename this field "text_message_time_sender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØÙâ8øóú’ /
+G
+java:S1068"+Remove this unused "context" private field.(êİç8ææğ’ /
+M
+java:S1068"+Remove this unused "userRef" private field.(À¾˜ôüÿÿÿÿ8ææğ’ /
+L
+java:S1659h"/Declare "txt_receiver_name" on a separate line.(ˆØÙâ8øóú’ /
+x	java:S116h"\Rename this field "txt_receiver_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØÙâ8øóú’ /
+€	java:S116j"_Rename this field "receiver_message_img" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜æùÄüÿÿÿÿ8øóú’ /
+N
+java:S1659h"1Declare "recieverMessagetext" on a separate line.(ˆØÙâ8øóú’ /
+u
+java:S1450"SRemove the "auth" field and declare it as a local variable in the relevant methods.(Ú‡›æøÿÿÿÿ8ßÓö’ /
+	java:S116j"`Rename this field "prof_message_receiver" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜æùÄüÿÿÿÿ8øóú’ /
+T
+java:S1659j"2Declare "receiver_message_img" on a separate line.(˜æùÄüÿÿÿÿ8øóú’ /

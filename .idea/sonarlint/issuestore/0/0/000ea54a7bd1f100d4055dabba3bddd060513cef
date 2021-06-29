@@ -1,0 +1,8 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(µğÆâÿÿÿÿÿ
+N
+java:S1602'",Remove useless curly braces around statement(…éñ³ùÿÿÿÿ8ú¢ûì/
+p	java:S1164"TRename this field "ClassName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êµÃü8Ô–öë/
+
+java:S1319"pThe type of the "mlist" object should be an interface such as "List" rather than the implementation "ArrayList".(ÈÚ‘É8ê¬áë/
+q	java:S1165"URename this field "CourseName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¯½º8Ô–öë/

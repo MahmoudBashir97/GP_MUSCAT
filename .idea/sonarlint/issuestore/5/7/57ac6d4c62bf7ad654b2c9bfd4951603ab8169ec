@@ -1,0 +1,13 @@
+
+m	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼â«“8¨•í/
+m	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼â«“8¨•í/
+M
+java:S1659"+Declare "rec_lecturers" on a separate line.(•æ±ºùÿÿÿÿ8È™Ïê/
+y	java:S116"XRename this field "rec_lecturers" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•æ±ºùÿÿÿÿ8È™Ïê/
+}	java:S116"\Rename this field "doctorAtt_adapter" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßá“ıÿÿÿÿ8í£©ì/
+N
+java:S16127",Replace this lambda with a method reference.(À–§áùÿÿÿÿ8ûæò/
+I
+java:S1612:",Replace this lambda with a method reference.(¥çİÃ8‹ê‹í/
+N
+java:S1612{",Replace this lambda with a method reference.(äè×Òøÿÿÿÿ8ÇÀ™ì/

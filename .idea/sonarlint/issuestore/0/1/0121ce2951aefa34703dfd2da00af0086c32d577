@@ -1,0 +1,39 @@
+
+K
+java:S3740±"/Provide the parametrized type for this generic.(Ô¹Ñ½øÿÿÿÿ
+c
+java:S11929"HDefine a constant instead of duplicating this literal "student" 3 times.(÷Íºóøÿÿÿÿ
+a
+java:S11926"FDefine a constant instead of duplicating this literal "Files" 3 times.(Ç¶óñøÿÿÿÿ
+K
+java:S1066—"/Merge this if statement with the enclosing one.(™ã†ãşÿÿÿÿ
+D
+java:S1604¹"(Make this anonymous inner class a lambda(ÆÀúÜşÿÿÿÿ
+D
+java:S1604ã"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ
+D
+java:S1604Ü"(Make this anonymous inner class a lambda(‘óĞ¾ıÿÿÿÿ
+Y
+java:S2259˜"BA "NullPointerException" could be thrown; "data" is nullable here.(Ù¼¡›
+Q
+java:S1874+"6Remove this use of "ProgressDialog"; it is deprecated.(ÿ¢ÿÿÿÿÿ
+V
+java:S1117u":Rename "dialog" which hides the field declared at line 43.(„Æˆ
+8³ş°Ë¢/
+G
+java:S1602{",Remove useless curly braces around statement(Îÿö·şÿÿÿÿ
+J
+java:S1602†",Remove useless curly braces around statement(ãèĞÅ8Äş°Ë¢/
+U
+java:S1854™"9Remove this useless assignment to local variable "pathe".( Â€ÿÿÿÿÿ
+R	java:S125š"<This block of commented-out lines of code should be removed.(¼ìãÙ
+M
+java:S1874¤"6Remove this use of "ProgressDialog"; it is deprecated.(†ÀÍ™
+N
+java:S1874¥"2Remove this use of "setMessage"; it is deprecated.(Ä¢Úºøÿÿÿÿ
+B
+java:S1075¬"&Remove this hard-coded path-delimiter.(ÍŠĞ øÿÿÿÿ
+<
+java:S1659Ë"%Declare "doctRef" on a separate line.(ğœÑ˜
+F
+java:S1481™"*Remove this unused "pathe" local variable.( Â€ÿÿÿÿÿ

@@ -1,0 +1,11 @@
+
+r	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ûßƒøÿÿÿÿ8³ÌÜ/
+r	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓÇ„şÿÿÿÿ8³ÌÜ/
+t
+java:S4144%"WUpdate this method so that its implementation is not identical to "setRoll" on line 29.(ûèÙ8½Ë¶è/
+v	java:S116"URename this field "student_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ï¸Âüÿÿÿÿ8ç˜ÇÜ/
+p	java:S116	"TRename this field "doctor_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¿—Ä8ç˜ÇÜ/
+j	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨¶öÜ8³ÌÜ/
+o	java:S100="NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ûßƒøÿÿÿÿ8³ÌÜ/
+o	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›»Èêÿÿÿÿÿ8³ÌÜ/
+o	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓÇ„şÿÿÿÿ8³ÌÜ/

@@ -52,7 +52,9 @@ public class StudentsList_Fragment extends Fragment {
         adapter = new ChatList_adapter(getContext(),mlist,index -> {
             getContext().startActivity(new Intent(getContext(), MessagesChat_Activity.class)
                     .putExtra("_id",mlist.get(index).getId())
-            .putExtra("_name",mlist.get(index).getName()));
+            .putExtra("_name",mlist.get(index).getName())
+            .putExtra("userToken",mlist.get(index).getDeviceToken()));
+
         });
 
 
@@ -73,11 +75,13 @@ public class StudentsList_Fragment extends Fragment {
                             String _email= sn.child("email").getValue().toString();
                             String _name = sn.child("name").getValue().toString();
                             String _pass = sn.child("password").getValue().toString();
+                            String _deviceToken = sn.child("deviceToken").getValue().toString();
                             User_Data_Model model =new User_Data_Model();
                             model.setId(_id);
                             model.setEmail(_email);
                             model.setName(_name);
                             model.setPassword(_pass);
+                            model.setDeviceToken(_deviceToken);
                             mlist.add(model);
                         }
                     }

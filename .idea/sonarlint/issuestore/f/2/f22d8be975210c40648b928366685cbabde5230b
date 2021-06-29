@@ -1,0 +1,34 @@
+
+C
+java:S1604p"(Make this anonymous inner class a lambda(Ðˆ‰Íùÿÿÿÿ
+>
+java:S1604u"(Make this anonymous inner class a lambda(—ü“¾
+D
+java:S1604‰"(Make this anonymous inner class a lambda(„Ç˜ˆÿÿÿÿÿ
+D
+java:S1604"(Make this anonymous inner class a lambda(œÁÈÌþÿÿÿÿ
+u
+java:S1450)"ZRemove the "quizBinding" field and declare it as a local variable in the relevant methods.(˜í«šýÿÿÿÿ
+Y
+java:S1854X">Remove this useless assignment to local variable "courseName".(šèáÐþÿÿÿÿ
+V
+java:S1854W";Remove this useless assignment to local variable "httpUrl".(÷ð¤¼ýÿÿÿÿ
+G
+java:S1602b",Remove useless curly braces around statement(Îÿö·þÿÿÿÿ
+v
+java:S3923h"[Remove this conditional structure or edit its code blocks so that they're not all the same.(¤¦ß‘üÿÿÿÿ
+V	java:S125i"<This block of commented-out lines of code should be removed.(™®ó„ûÿÿÿÿ
+V	java:S125k"<This block of commented-out lines of code should be removed.(Šµèšøÿÿÿÿ
+E
+java:S1172}"/Remove this unused method parameter "fileName".(ò§¼·
+W	java:S125„"<This block of commented-out lines of code should be removed.(ë–€ýÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(ßåµ—
+?	java:S108–")Either remove or fill this block of code.(ï­£Ä
+W	java:S125™"<This block of commented-out lines of code should be removed.(Ì¡Àúÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(®þ”ˆûÿÿÿÿ
+G
+java:S1481W",Remove this unused "httpUrl" local variable.(÷ð¤¼ýÿÿÿÿ
+J
+java:S1481X"/Remove this unused "courseName" local variable.(šèáÐþÿÿÿÿ
+Q
+java:S1144o"6Remove this unused private "signInAnonymously" method.(ûˆÙ³üÿÿÿÿ

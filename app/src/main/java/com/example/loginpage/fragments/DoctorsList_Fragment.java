@@ -71,11 +71,13 @@ public class DoctorsList_Fragment extends Fragment {
                             String _email= sn.child("email").getValue().toString();
                             String _name = sn.child("name").getValue().toString();
                             String _pass = sn.child("password").getValue().toString();
+                            String _deviceToken = sn.child("deviceToken").getValue().toString();
                             User_Data_Model model =new User_Data_Model();
                             model.setId(_id);
                             model.setEmail(_email);
                             model.setName(_name);
                             model.setPassword(_pass);
+                            model.setDeviceToken(_deviceToken);
                             mlist.add(model);
                         }
                     }

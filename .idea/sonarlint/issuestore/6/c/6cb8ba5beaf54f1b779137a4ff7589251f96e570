@@ -1,0 +1,11 @@
+
+w	java:S116@"VRename this field "course_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¢Âùúÿÿÿÿ8Õ•Ş/
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(„‹àûÿÿÿÿ
+t	java:S116@"SRename this field "date_att" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¢Âùúÿÿÿÿ8²¿¦Ş/
+K
+java:S1659@")Declare "course_name" on a separate line.(¹¢Âùúÿÿÿÿ8Õ•Ş/
+H
+java:S1659@"&Declare "date_att" on a separate line.(¹¢Âùúÿÿÿÿ8²¿¦Ş/
+š
+java:S1319"xThe type of the "studentsItems" object should be an interface such as "List" rather than the implementation "ArrayList".(˜ø¼Åøÿÿÿÿ8áÑüİ/
+v	java:S116@"URename this field "class_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¢Âùúÿÿÿÿ8ÄÔ”Ş/

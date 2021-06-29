@@ -4,12 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.media.AudioAttributes;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.loginpage.Inter_faces.Api_Interface;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
 import com.example.loginpage.adapters.MessageAdapter;
@@ -23,6 +34,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.example.loginpage.models.send;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,6 +42,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 public class MessagesChat_Activity extends AppCompatActivity {
 
@@ -41,6 +54,14 @@ public class MessagesChat_Activity extends AppCompatActivity {
     private MessageAdapter adapter;
     private final List<Messages> messagesList=new ArrayList<>();
 
+    String BaseURL="https://fcm.googleapis.com/";
+    final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
+    final private String serverKey = "key=" + "AAAAgI6vvSI:APA91bHGvogeUgWQ97SkStw6arGtDecp-uxTrhIqP5Z0N0zFUASCLcsg_0SJ-R1U_pCl2jdGwgFjL4VW0vHckrVNWVSWI3AGKmZ79lc5HRWVCDuclbR-mF7Iq3o7Zutnsw12G_hQpfwP";
+    final private String contentType = "application/json";
+    final String TAG = "NOTIFICATION TAG";
+    private String CurrentUserID;
+    private String userToken="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +72,12 @@ public class MessagesChat_Activity extends AppCompatActivity {
         messageRecieverID = getIntent().getStringExtra("_id");
         myName= SharedPrefranceManager.getInastance(getApplicationContext()).getUser_Name();
         destination_name = getIntent().getStringExtra("_name");
+        userToken = getIntent().getStringExtra("userToken");
 
         rootRef = FirebaseDatabase.getInstance().getReference("Messages");
         messageRefReceiver = FirebaseDatabase.getInstance().getReference("Messages");
 
+        createNotificationChannel();
 
         Calendar calendar=Calendar.getInstance();
 
@@ -78,6 +101,26 @@ public class MessagesChat_Activity extends AppCompatActivity {
         chatBinding.backBtn.setOnClickListener(v -> {
             onBackPressed();
         });
+    }
+
+    private void createNotificationChannel() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "MahmoudChannel";
+            String description = "Channel for Mahmoud Reminder";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("message", name, importance);
+            Log.d("checkingMessage : ","created"+channel.getId());
+            channel.setDescription(description);
+            AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .setUsage(AudioAttributes.USAGE_ALARM)
+                    .build();
+            channel.setSound(Settings.System.DEFAULT_NOTIFICATION_URI,audioAttributes);
+
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 
     private void RetreiverMessages(){
@@ -122,6 +165,18 @@ public class MessagesChat_Activity extends AppCompatActivity {
             chatBinding.inputMessage.requestFocus();
         }else {
 
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BaseURL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+
+
+            Api_Interface api_interface =retrofit.create(Api_Interface.class);
+
+
+
+
+
             DatabaseReference random ;
             random = FirebaseDatabase.getInstance().getReference("Registeration");
             random.child("Students").addValueEventListener(new ValueEventListener() {
@@ -159,6 +214,34 @@ public class MessagesChat_Activity extends AppCompatActivity {
             Map messageBodyDetails = new HashMap();
             messageBodyDetails.put(messageSendRef + "/" + messagePushID, messageTextBody);
             messageBodyDetails.put(messageRecieveRef + "/" + messagePushID, messageTextBody);
+
+
+
+            Messages data = new Messages();
+            data.setTo(messageRecieverID);
+            data.setFrom(messageSenderID);
+            data.setDate(saveCurrentDate);
+            data.setTime(saveCurrentTime);
+            data.setType("message");
+            data.setName(SharedPrefranceManager.getInastance(getApplicationContext()).getUser_Name());
+            data.setMessage(messageText);
+            data.setMessageID(messagePushID);
+
+            send stored_data = new send(userToken,data);
+            Call<send> sendCall = api_interface.storedata(stored_data);
+            sendCall.enqueue(new Callback<send>() {
+                @Override
+                public void onResponse(Call<send> call, Response<send> response) {
+                    send sendResponse = response.body();
+                    Log.e("send", "sendResponse --> " + sendResponse);
+                }
+
+                @Override
+                public void onFailure(Call<send> call, Throwable t) {
+                    Toast.makeText(MessagesChat_Activity.this, "error : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+
 
 
             rootRef.child(messageSenderID)
