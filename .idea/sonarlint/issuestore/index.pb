@@ -214,8 +214,6 @@ s
 Capp/src/main/java/com/example/loginpage/models/User_Data_Model.java,e\2\e2ee50f39a1c089bea62f4ef41e5c9ce273f4246
 …
 Uapp/src/main/java/com/example/loginpage/Services/FCM/MyFirebaseInstanceIdService.java,5\e\5eff92bc51c11288143b328ab4716f6baef9ab9b
-g
-7app/src/main/java/com/example/loginpage/Services/m.java,4\e\4ed6023b1a25d1214d87ac0f2ec14a68c1272e1d
 m
 =app/src/main/java/com/example/loginpage/ui/TeacherSignup.java,3\f\3f7470ea9a4c85ace220eeddc05e1398953b2a68
 @
@@ -226,3 +224,19 @@ Lapp/src/main/java/com/example/loginpage/fragments/StudentsList_Fragment.java,4
 Papp/src/main/java/com/example/loginpage/LocalStorage/SharedPrefranceManager.java,b\2\b23b88f65a53b130dbf7f650f9d2f4d838073d8a
 m
 =app/src/main/java/com/example/loginpage/ui/StudentSignup.java,9\e\9e94780d828103abf7a4d14ae49f6e2923f36136
+a
+1app/src/main/java/com/example/loginpage/Chat.java,6\b\6b170a4b3c50f0afc9f7b78c5d492b10188e8c03
+h
+8app/src/main/java/com/example/loginpage/models/send.java,c\4\c4d6712189c6b7c65e0e0b18e8f33f352e208568
+l
+<app/src/main/java/com/example/loginpage/models/Messages.java,f\7\f7de54e8be6b4a9df84947e1668db5745e8631bb
+„
+Tapp/src/main/java/com/example/loginpage/Services/FCM/MyFirebaseMessagingService.java,f\7\f7099cc81fe33be6a1f7f2d3dbf80843cf8c1b1f
+p
+@app/src/main/java/com/example/loginpage/Services/MyReceiver.java,8\e\8e64ce3c25d8c3fe671f47be9284da3906c7e2cf
+u
+Eapp/src/main/java/com/example/loginpage/ui/MessagesChat_Activity.java,5\5\55b951e85d5c95c8bc49b560d9a492d62e4b87d1
+l
+<app/src/main/java/com/example/loginpage/ui/StudentLogin.java,1\7\17cab6d1fef7dac7188b3ce49fdafb343d3b33d2
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
