@@ -230,8 +230,6 @@ h
 8app/src/main/java/com/example/loginpage/models/send.java,c\4\c4d6712189c6b7c65e0e0b18e8f33f352e208568
 l
 <app/src/main/java/com/example/loginpage/models/Messages.java,f\7\f7de54e8be6b4a9df84947e1668db5745e8631bb
-„
-Tapp/src/main/java/com/example/loginpage/Services/FCM/MyFirebaseMessagingService.java,f\7\f7099cc81fe33be6a1f7f2d3dbf80843cf8c1b1f
 p
 @app/src/main/java/com/example/loginpage/Services/MyReceiver.java,8\e\8e64ce3c25d8c3fe671f47be9284da3906c7e2cf
 u
@@ -240,3 +238,5 @@ l
 <app/src/main/java/com/example/loginpage/ui/StudentLogin.java,1\7\17cab6d1fef7dac7188b3ce49fdafb343d3b33d2
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+l
+<app/src/main/java/com/example/loginpage/ui/TeacherLogin.java,9\8\989dfd5bcd2cf87f1095c47d7fb520926eb364e5

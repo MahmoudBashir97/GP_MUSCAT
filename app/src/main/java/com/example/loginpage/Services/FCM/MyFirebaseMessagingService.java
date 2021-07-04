@@ -3,6 +3,7 @@ package com.example.loginpage.Services.FCM;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.util.Log;
@@ -48,6 +49,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
             Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            Ringtone r = RingtoneManager.getRingtone(this, notification);
+            r.play();
             Notification builder = new NotificationCompat.Builder(this,MESSAGE)
                     .setSmallIcon(R.drawable.chat_icon2)
                     .setPriority(PRIORITY_MAX)
