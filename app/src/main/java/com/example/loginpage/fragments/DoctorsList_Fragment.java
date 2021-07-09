@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +17,11 @@ import com.example.loginpage.Chat;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
 import com.example.loginpage.adapters.ChatList_adapter;
+import com.example.loginpage.models.RecentMessagesIds_Model;
 import com.example.loginpage.models.User_Data_Model;
 import com.example.loginpage.ui.MessagesChat_Activity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,16 +29,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class DoctorsList_Fragment extends Fragment {
 
-    DatabaseReference reference;
+    DatabaseReference reference,RecentMessagesId;
     ArrayList<User_Data_Model> mlist = new ArrayList<>();
+    ArrayList<RecentMessagesIds_Model> recentIds = new ArrayList<>();
     RecyclerView rec_chats;
     ChatList_adapter adapter;
+    String myId ;
 
-    public DoctorsList_Fragment() {
-        // Required empty public constructor
+    public DoctorsList_Fragment(ArrayList<RecentMessagesIds_Model> recentIds) {
+        this.recentIds = recentIds;
     }
 
     @Override
@@ -45,22 +53,40 @@ public class DoctorsList_Fragment extends Fragment {
         rec_chats = v.findViewById(R.id.rec_chats);
         rec_chats.setHasFixedSize(true);
 
+        myId = SharedPrefranceManager.getInastance(getContext()).getUser_ID();
+
         reference = FirebaseDatabase.getInstance().getReference("Registeration");
+        RecentMessagesId = FirebaseDatabase.getInstance().getReference("RecentMessagesIds");
 
 
-        adapter = new ChatList_adapter(getContext(),mlist,index -> {
+        adapter = new ChatList_adapter(getContext(),mlist,recentIds,index -> {
             getContext().startActivity(new Intent(getContext(), MessagesChat_Activity.class)
                     .putExtra("_id",mlist.get(index).getId())
                     .putExtra("_name",mlist.get(index).getName()));
+
+            for (RecentMessagesIds_Model n :recentIds) {
+                if (mlist.get(index).getId().equals(n.getSenderId())){
+                    removeSenderIdFromRecentIds(n.getSenderId());
+                }
+            }
         });
 
         getDoctorsList();
         return v;
     }
+    private void removeSenderIdFromRecentIds(String senderId){
+        RecentMessagesId.child(myId).child(senderId).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    Log.d("recentIds","removed successfully");
+                }
+            }
+        });
+    }
 
     private void getDoctorsList(){
         mlist.clear();
-        String myId = SharedPrefranceManager.getInastance(getContext()).getUser_ID();
         reference.child("Doctors").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

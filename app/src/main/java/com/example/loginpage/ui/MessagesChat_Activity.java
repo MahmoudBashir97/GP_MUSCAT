@@ -48,7 +48,7 @@ public class MessagesChat_Activity extends AppCompatActivity {
 
     String messageSenderID,messageRecieverID;
     String saveCurrentDate,saveCurrentTime;
-    DatabaseReference rootRef,messageRefReceiver;
+    DatabaseReference rootRef,messageRefReceiver,RecentMessagesPath;
     private String myName,pharma_name,destination_name;
     ActivityMessagesChatBinding chatBinding;
     private MessageAdapter adapter;
@@ -76,6 +76,7 @@ public class MessagesChat_Activity extends AppCompatActivity {
 
         rootRef = FirebaseDatabase.getInstance().getReference("Messages");
         messageRefReceiver = FirebaseDatabase.getInstance().getReference("Messages");
+        RecentMessagesPath = FirebaseDatabase.getInstance().getReference("RecentMessagesIds");
 
         chatBinding.txtDestinationName.setText(destination_name);
         createNotificationChannel();
@@ -88,6 +89,7 @@ public class MessagesChat_Activity extends AppCompatActivity {
         SimpleDateFormat currentTime=new SimpleDateFormat("hh:mm a");
 
         saveCurrentTime=currentTime.format(calendar.getTime());
+
 
         RetreiverMessages();
         adapter = new MessageAdapter(myName,destination_name,this,messagesList,messageSenderID);
@@ -264,6 +266,7 @@ public class MessagesChat_Activity extends AppCompatActivity {
                                                 if (task.isSuccessful()){
                                                     Log.e("Send message", "Message Sent Successfully...");
                                                     adapter.notifyDataSetChanged();
+                                                    recentMessagesIdPath();
                                                 }
                                             }
                                         });
@@ -276,5 +279,24 @@ public class MessagesChat_Activity extends AppCompatActivity {
 
 
         }
+    }
+    private void recentMessagesIdPath(){
+        long datTime = System.currentTimeMillis();
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("senderId",messageSenderID);
+        map.put("date",""+datTime);
+
+        RecentMessagesPath.child(messageRecieverID)
+                .child(messageSenderID)
+                .updateChildren(map)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Log.d("recentMessagesId : ","success ");
+                        }
+                    }
+                });
+
     }
 }

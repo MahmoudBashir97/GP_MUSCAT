@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,11 @@ import android.widget.Toast;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
 import com.example.loginpage.adapters.ChatList_adapter;
+import com.example.loginpage.models.RecentMessagesIds_Model;
 import com.example.loginpage.models.User_Data_Model;
 import com.example.loginpage.ui.MessagesChat_Activity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,17 +29,24 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class StudentsList_Fragment extends Fragment {
 
-    DatabaseReference reference;
+    DatabaseReference reference,RecentMessagesId;
     ArrayList<User_Data_Model> mlist = new ArrayList<>();
+    ArrayList<RecentMessagesIds_Model> recentsList = new ArrayList<>();
     RecyclerView rec_chats;
     ChatList_adapter adapter;
+    String myId;
+    String n;
 
-    public StudentsList_Fragment() {
+    public StudentsList_Fragment( ArrayList<RecentMessagesIds_Model> recentsList) {
         // Required empty public constructor
+        this.recentsList = recentsList;
+
     }
 
     @Override
@@ -46,21 +57,72 @@ public class StudentsList_Fragment extends Fragment {
         rec_chats = v.findViewById(R.id.rec_chats);
         rec_chats.setHasFixedSize(true);
 
+
+        myId = SharedPrefranceManager.getInastance(getContext()).getUser_ID();
+
         reference = FirebaseDatabase.getInstance().getReference("Registeration");
+        RecentMessagesId = FirebaseDatabase.getInstance().getReference("RecentMessagesIds");
 
 
-        adapter = new ChatList_adapter(getContext(),mlist,index -> {
+        adapter = new ChatList_adapter(getContext(),mlist,recentsList,index -> {
             getContext().startActivity(new Intent(getContext(), MessagesChat_Activity.class)
                     .putExtra("_id",mlist.get(index).getId())
             .putExtra("_name",mlist.get(index).getName())
             .putExtra("userToken",mlist.get(index).getDeviceToken()));
-
+            for (RecentMessagesIds_Model n :recentsList) {
+                if (mlist.get(index).getId().equals(n.getSenderId())){
+                    removeSenderIdFromRecentIds(n.getSenderId());
+                }
+            }
         });
 
 
         getStudentsList();
 
         return v;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        adapter.notifyDataSetChanged();
+    }
+
+    private void removeSenderIdFromRecentIds(String senderId){
+        RecentMessagesId.child(myId).child(senderId).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    Log.d("recentIds","removed successfully");
+                }
+            }
+        });
+    }
+    private void getRecentMessagesIds(){
+
+        recentsList.clear();
+        RecentMessagesId.child(myId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot.exists()){
+                    if (snapshot.hasChildren()){
+                        for (DataSnapshot sn :
+                             snapshot.getChildren()) {
+                            RecentMessagesIds_Model model = sn.getValue(RecentMessagesIds_Model.class);
+                            recentsList.add(model);
+                            Log.d("recentIds : ","gg "+recentsList.size());
+                        }
+
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                error.getMessage();
+            }
+        });
     }
     private void getStudentsList(){
         mlist.clear();
@@ -85,6 +147,7 @@ public class StudentsList_Fragment extends Fragment {
                             mlist.add(model);
                         }
                     }
+                   // getRecentMessagesIds();
                     rec_chats.setAdapter(adapter);
                 }
             }
@@ -95,4 +158,18 @@ public class StudentsList_Fragment extends Fragment {
             }
         });
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("resumedNow : ","success");
+        //adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("pausedNow : ","success");
+    }
 }
+

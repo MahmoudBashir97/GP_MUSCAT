@@ -11,6 +11,9 @@ import com.example.loginpage.DownloadQuiz;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class StudentDashboard extends AppCompatActivity {
     private CardView student_to_chat_btn,student_to_files_btn,student_to_attendance_btn,student_to_quiz_btn,logout_btn,student_to_profile_btn;
     @Override
@@ -48,7 +51,9 @@ public class StudentDashboard extends AppCompatActivity {
     }
 
     private void navToChatActivity(){
+
         student_to_chat_btn.setOnClickListener(v -> {
+
             startActivity(new Intent(getApplicationContext(), Chat.class));
         });
     }

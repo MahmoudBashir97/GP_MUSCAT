@@ -2,6 +2,9 @@ package com.example.loginpage.LocalStorage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
+
+import java.util.Set;
 
 public class SharedPrefranceManager {
     Context context;
@@ -37,6 +40,22 @@ public class SharedPrefranceManager {
         editor.putBoolean("userLogged", true);
 
         editor.apply();
+    }
+
+    public void saveListRecentIdsMessages(Set<String> recentIdsMessages) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_USER, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        for (String n:recentIdsMessages){
+           Log.d("savedVal :","  "+ n);
+        }
+        editor.putStringSet("recentIds",recentIdsMessages);
+        editor.apply();
+        editor.commit();
+    }
+
+    public Set<String> getRecentIdsMessages(){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_USER, Context.MODE_PRIVATE);
+        return sharedPreferences.getStringSet("recentIds",null);
     }
 
     public String getDeviceToken(){

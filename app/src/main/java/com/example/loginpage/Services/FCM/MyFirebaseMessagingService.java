@@ -8,10 +8,14 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.util.Log;
 
+import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
 import com.example.loginpage.Services.MyReceiver;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -37,7 +41,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.d("checkingMessage :","success"+messageReceiverToken);
 
 
-
+            /*Set<String> recentIdsMessages = new HashSet<>();
+            recentIdsMessages.add(messageFrom);
+            SharedPrefranceManager.getInastance(this).saveListRecentIdsMessages(recentIdsMessages);*/
 
             Intent reciveMessage = new Intent(getApplicationContext(), MyReceiver.class)
                     .setAction("message")
