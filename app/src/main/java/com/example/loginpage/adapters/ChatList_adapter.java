@@ -13,6 +13,7 @@ import com.example.loginpage.Inter_faces.chatListOnCLickInterface;
 import com.example.loginpage.R;
 import com.example.loginpage.models.RecentMessagesIds_Model;
 import com.example.loginpage.models.User_Data_Model;
+import com.example.loginpage.room.MessageSchema;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -22,11 +23,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ChatList_adapter extends RecyclerView.Adapter<ChatList_adapter.ViewHolder> {
     ArrayList<User_Data_Model> mlist;
-    ArrayList<RecentMessagesIds_Model> recentIds;
+    ArrayList<MessageSchema> recentIds;
     Context context;
     chatListOnCLickInterface cLickInterface;
 
-    public ChatList_adapter(Context context, ArrayList<User_Data_Model> mlist,ArrayList<RecentMessagesIds_Model> recentIds, chatListOnCLickInterface cLickInterface) {
+    public ChatList_adapter(Context context, ArrayList<User_Data_Model> mlist,ArrayList<MessageSchema> recentIds, chatListOnCLickInterface cLickInterface) {
         this.mlist=mlist;
         this.context=context;
         this.cLickInterface=cLickInterface;
@@ -44,9 +45,9 @@ public class ChatList_adapter extends RecyclerView.Adapter<ChatList_adapter.View
     public void onBindViewHolder(@NonNull ChatList_adapter.ViewHolder holder, int position) {
         holder.txt_user_name.setText(mlist.get(position).getName());
 
-       for (RecentMessagesIds_Model n :recentIds) {
-            Log.d("setIds : ","id success : "+n);
-            if (mlist.get(position).getId().equals(n.getSenderId())){
+       for (MessageSchema n :recentIds) {
+            Log.d("setIds : ","id success : "+n.getId());
+            if (Integer.parseInt(mlist.get(position).getId()) == n.getId()){
 
                 holder.txt_user_name.setTextColor(Color.BLACK);
                 holder.txt_user_name.setTypeface(null, Typeface.BOLD);

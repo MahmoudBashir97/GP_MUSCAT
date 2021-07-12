@@ -14,9 +14,4 @@ public interface Api_Interface {
     @POST("fcm/send")
     public Call<send> storedata(@Body send send);
 
-    //لما تبعت الداتا مع بعض زي مثلا عبارة عن package
-    @Headers({"Authorization: key=AAAAgI6vvSI:APA91bHGvogeUgWQ97SkStw6arGtDecp-uxTrhIqP5Z0N0zFUASCLcsg_0SJ-R1U_pCl2jdGwgFjL4VW0vHckrVNWVSWI3AGKmZ79lc5HRWVCDuclbR-mF7Iq3o7Zutnsw12G_hQpfwP",
-            "Content-Type:application/json"})
-    @POST("fcm/send")
-    public Call<send> chatRequest(@Body send send);
 }

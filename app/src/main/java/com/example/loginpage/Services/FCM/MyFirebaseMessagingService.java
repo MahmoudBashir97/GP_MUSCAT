@@ -11,6 +11,8 @@ import android.util.Log;
 import com.example.loginpage.LocalStorage.SharedPrefranceManager;
 import com.example.loginpage.R;
 import com.example.loginpage.Services.MyReceiver;
+import com.example.loginpage.room.DbRepository;
+import com.example.loginpage.room.MessageSchema;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -20,6 +22,9 @@ import java.util.Set;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import io.reactivex.CompletableObserver;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 import static androidx.core.app.NotificationCompat.PRIORITY_MAX;
 
@@ -41,9 +46,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.d("checkingMessage :","success"+messageReceiverToken);
 
 
-            /*Set<String> recentIdsMessages = new HashSet<>();
-            recentIdsMessages.add(messageFrom);
-            SharedPrefranceManager.getInastance(this).saveListRecentIdsMessages(recentIdsMessages);*/
+            addLocalRecentMessagesId(messageFrom,senderName,messageReceiverToken);
+
 
             Intent reciveMessage = new Intent(getApplicationContext(), MyReceiver.class)
                     .setAction("message")
@@ -74,5 +78,29 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }else {
             Log.d("checkingMessage :","failed");
         }
+    }
+
+    private void addLocalRecentMessagesId(String messageFrom, String senderName, String messageReceiverToken) {
+        MessageSchema schema = new MessageSchema(Integer.parseInt(messageFrom),
+                senderName,
+                messageReceiverToken);
+        DbRepository repository = new DbRepository(getApplication());
+        repository.insert(schema).subscribeOn(Schedulers.io())
+                .subscribe(new CompletableObserver() {
+                    @Override
+                    public void onSubscribe(@io.reactivex.annotations.NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.d("insertId : ","completedSuccess");
+                    }
+
+                    @Override
+                    public void onError(@io.reactivex.annotations.NonNull Throwable e) {
+                        e.getMessage();
+                    }
+                });
     }
 }

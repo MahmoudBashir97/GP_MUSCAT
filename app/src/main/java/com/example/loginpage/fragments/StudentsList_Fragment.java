@@ -6,6 +6,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import io.reactivex.CompletableObserver;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +21,8 @@ import com.example.loginpage.R;
 import com.example.loginpage.adapters.ChatList_adapter;
 import com.example.loginpage.models.RecentMessagesIds_Model;
 import com.example.loginpage.models.User_Data_Model;
+import com.example.loginpage.room.DbRepository;
+import com.example.loginpage.room.MessageSchema;
 import com.example.loginpage.ui.MessagesChat_Activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,14 +43,15 @@ public class StudentsList_Fragment extends Fragment {
     DatabaseReference reference,RecentMessagesId;
     ArrayList<User_Data_Model> mlist = new ArrayList<>();
     ArrayList<RecentMessagesIds_Model> recentsList = new ArrayList<>();
+    ArrayList<MessageSchema> recentsIds = new ArrayList<>();
     RecyclerView rec_chats;
     ChatList_adapter adapter;
     String myId;
     String n;
 
-    public StudentsList_Fragment( ArrayList<RecentMessagesIds_Model> recentsList) {
+    public StudentsList_Fragment( ArrayList<MessageSchema> recentsList) {
         // Required empty public constructor
-        this.recentsList = recentsList;
+        this.recentsIds = recentsList;
 
     }
 
@@ -64,16 +70,16 @@ public class StudentsList_Fragment extends Fragment {
         RecentMessagesId = FirebaseDatabase.getInstance().getReference("RecentMessagesIds");
 
 
-        adapter = new ChatList_adapter(getContext(),mlist,recentsList,index -> {
+        adapter = new ChatList_adapter(getContext(),mlist,recentsIds,index -> {
             getContext().startActivity(new Intent(getContext(), MessagesChat_Activity.class)
                     .putExtra("_id",mlist.get(index).getId())
             .putExtra("_name",mlist.get(index).getName())
             .putExtra("userToken",mlist.get(index).getDeviceToken()));
-            for (RecentMessagesIds_Model n :recentsList) {
-                if (mlist.get(index).getId().equals(n.getSenderId())){
-                    removeSenderIdFromRecentIds(n.getSenderId());
-                }
-            }
+
+            removeReadRecentIdsMessages(Integer.parseInt(mlist.get(index).getId()),
+                    mlist.get(index).getName(),
+                    mlist.get(index).getDeviceToken());
+
         });
 
 
@@ -82,48 +88,35 @@ public class StudentsList_Fragment extends Fragment {
         return v;
     }
 
+    private void removeReadRecentIdsMessages(int id, String name, String deviceToken) {
+        MessageSchema schema = new MessageSchema(id,name,deviceToken);
+        DbRepository repository = new DbRepository(getActivity().getApplication());
+        repository.delete(schema).subscribeOn(Schedulers.io())
+                .subscribe(new CompletableObserver() {
+                    @Override
+                    public void onSubscribe(@io.reactivex.annotations.NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.d("messageStatus : ","read!");
+                        Log.d("messageStatus : ","deletedSuccess");
+                    }
+
+                    @Override
+                    public void onError(@io.reactivex.annotations.NonNull Throwable e) {
+                        e.getMessage();
+                    }
+                });
+    }
+
     @Override
     public void onDetach() {
         super.onDetach();
         adapter.notifyDataSetChanged();
     }
 
-    private void removeSenderIdFromRecentIds(String senderId){
-        RecentMessagesId.child(myId).child(senderId).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
-                    Log.d("recentIds","removed successfully");
-                }
-            }
-        });
-    }
-    private void getRecentMessagesIds(){
-
-        recentsList.clear();
-        RecentMessagesId.child(myId).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                if (snapshot.exists()){
-                    if (snapshot.hasChildren()){
-                        for (DataSnapshot sn :
-                             snapshot.getChildren()) {
-                            RecentMessagesIds_Model model = sn.getValue(RecentMessagesIds_Model.class);
-                            recentsList.add(model);
-                            Log.d("recentIds : ","gg "+recentsList.size());
-                        }
-
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                error.getMessage();
-            }
-        });
-    }
     private void getStudentsList(){
         mlist.clear();
         String myId = SharedPrefranceManager.getInastance(getContext()).getUser_ID();

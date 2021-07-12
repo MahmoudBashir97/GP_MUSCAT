@@ -19,6 +19,7 @@ import com.example.loginpage.R;
 import com.example.loginpage.adapters.ChatList_adapter;
 import com.example.loginpage.models.RecentMessagesIds_Model;
 import com.example.loginpage.models.User_Data_Model;
+import com.example.loginpage.room.MessageSchema;
 import com.example.loginpage.ui.MessagesChat_Activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,13 +37,13 @@ public class DoctorsList_Fragment extends Fragment {
 
     DatabaseReference reference,RecentMessagesId;
     ArrayList<User_Data_Model> mlist = new ArrayList<>();
-    ArrayList<RecentMessagesIds_Model> recentIds = new ArrayList<>();
+    ArrayList<MessageSchema> recentIdsList = new ArrayList<>();
     RecyclerView rec_chats;
     ChatList_adapter adapter;
     String myId ;
 
-    public DoctorsList_Fragment(ArrayList<RecentMessagesIds_Model> recentIds) {
-        this.recentIds = recentIds;
+    public DoctorsList_Fragment(ArrayList<MessageSchema> recentIds) {
+        this.recentIdsList = recentIds;
     }
 
     @Override
@@ -59,16 +60,16 @@ public class DoctorsList_Fragment extends Fragment {
         RecentMessagesId = FirebaseDatabase.getInstance().getReference("RecentMessagesIds");
 
 
-        adapter = new ChatList_adapter(getContext(),mlist,recentIds,index -> {
+        adapter = new ChatList_adapter(getContext(),mlist,recentIdsList,index -> {
             getContext().startActivity(new Intent(getContext(), MessagesChat_Activity.class)
                     .putExtra("_id",mlist.get(index).getId())
                     .putExtra("_name",mlist.get(index).getName()));
 
-            for (RecentMessagesIds_Model n :recentIds) {
+           /* for (RecentMessagesIds_Model n :recentIds) {
                 if (mlist.get(index).getId().equals(n.getSenderId())){
                     removeSenderIdFromRecentIds(n.getSenderId());
                 }
-            }
+            }*/
         });
 
         getDoctorsList();
