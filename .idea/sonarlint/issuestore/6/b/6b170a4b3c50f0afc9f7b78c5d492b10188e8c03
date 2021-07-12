@@ -1,0 +1,12 @@
+
+E
+java:S1066M"/Merge this if statement with the enclosing one.(¢¹İ
+C
+java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX
+E
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ
+p
+java:S1450"URemove the "tablay" field and declare it as a local variable in the relevant methods.(­”²ûÿÿÿÿ
+s
+java:S1450"XRemove the "viewPager" field and declare it as a local variable in the relevant methods.(åÙ¬Ïûÿÿÿÿ
+u	java:S116 "[Rename this field "RecentMessagesId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àø‚Üşÿÿÿÿ

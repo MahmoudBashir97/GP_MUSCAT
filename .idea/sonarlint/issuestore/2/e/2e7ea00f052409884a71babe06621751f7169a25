@@ -1,0 +1,14 @@
+
+†
+java:S1319"pThe type of the "mlist" object should be an interface such as "List" rather than the implementation "ArrayList".(ª΄§
+
+java:S1319"tThe type of the "recentIds" object should be an interface such as "List" rather than the implementation "ArrayList".(ª΄§
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(™Ό¦
+E
+java:S1128"*Remove this unused import 'java.util.Set'.(φ²„¤ώÿÿÿÿ
+G
+java:S16029",Remove useless curly braces around statement(…ιρ³ωÿÿÿÿ
+G
+java:S1659E",Declare "txt_annotation" on a separate line.(½ώ‹ϋωÿÿÿÿ
+r	java:S116E"XRename this field "txt_user_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ώ‹ϋωÿÿÿÿ
+s	java:S116E"YRename this field "txt_annotation" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ώ‹ϋωÿÿÿÿ

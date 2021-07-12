@@ -1,0 +1,27 @@
+
+f	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôî¢Ò
+f	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œü–á
+f	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ÃŒĞ
+k	java:S117c"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ğÏ®ıÿÿÿÿ
+C
+java:S1604i"(Make this anonymous inner class a lambda(ÔÒ¥øøÿÿÿÿ
+S
+java:S1128"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8®¤€¥/
+J
+java:S1659!"/Declare "teacher_login_btn" on a separate line.(Àè¹ãùÿÿÿÿ
+A
+java:S1659""&Declare "edt_pass" on a separate line.(Éª ÿÿÿÿÿ
+H
+java:S1659%"&Declare "tokenRef" on a separate line.(¹ˆÂŒúÿÿÿÿ8ª­ºÀ¥/
+w	java:S116!"]Rename this field "teacher_signup_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àè¹ãùÿÿÿÿ
+v	java:S116!"\Rename this field "teacher_login_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àè¹ãùÿÿÿÿ
+n	java:S116""TRename this field "edt_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éª ÿÿÿÿÿ
+m	java:S116""SRename this field "edt_pass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éª ÿÿÿÿÿ
+s	java:S116#"YRename this field "txt_forgot_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÁâïÿÿÿÿÿ
+g	java:S116'"RRename this field "pro_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Ëä‡
+G
+java:S1602=",Remove useless curly braces around statement(ß™êøÿÿÿÿ
+G
+java:S1602F",Remove useless curly braces around statement(†Á§ıøÿÿÿÿ
+m
+java:S3776X"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(İ‰ä›ÿÿÿÿÿ

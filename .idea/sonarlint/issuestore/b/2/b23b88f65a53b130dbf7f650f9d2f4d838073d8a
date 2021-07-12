@@ -1,0 +1,11 @@
+
+f
+java:S1192("KDefine a constant instead of duplicating this literal "userLogged" 3 times.(ö¨¯ˆùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ°¸Öüÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÿ²ì
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¶‰Î‡ÿÿÿÿÿ
+h	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡·á·ÿÿÿÿÿ
+h	java:S100F"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÅÁ¸ùÿÿÿÿ
+c	java:S100K"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÆ‰Õ
+c	java:S100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÚãõ

@@ -1,0 +1,27 @@
+
+>
+java:S1604M"(Make this anonymous inner class a lambda(³Ö×•
+C
+java:S1604T"(Make this anonymous inner class a lambda(œÁÈÌþÿÿÿÿ
+C
+java:S1604e"(Make this anonymous inner class a lambda(ÔÒ¥øøÿÿÿÿ
+C
+java:S1604^"(Make this anonymous inner class a lambda(ò¹æöùÿÿÿÿ
+C
+java:S1604t"(Make this anonymous inner class a lambda(œÁÈÌþÿÿÿÿ
+x
+java:S1488œ"aImmediately return this expression instead of assigning it to the temporary variable "randomNum".(ÃªˆÜ
+B
+java:S1659!"'Declare "edt_lname" on a separate line.(ŸÞù¨ýÿÿÿÿ
+B
+java:S1659!"'Declare "edt_email" on a separate line.(ŸÞù¨ýÿÿÿÿ
+A
+java:S1659!"&Declare "edt_pass" on a separate line.(ŸÞù¨ýÿÿÿÿ
+r	java:S116 "]Rename this field "teacher_signup_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñáìÇ
+n	java:S116!"TRename this field "edt_fname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÞù¨ýÿÿÿÿ
+n	java:S116!"TRename this field "edt_lname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÞù¨ýÿÿÿÿ
+n	java:S116!"TRename this field "edt_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÞù¨ýÿÿÿÿ
+m	java:S116!"SRename this field "edt_pass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÞù¨ýÿÿÿÿ
+g	java:S116%"RRename this field "pro_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Ëä‡
+5
+java:S2119™"Save and re-use this "Random".(’Æ§ò

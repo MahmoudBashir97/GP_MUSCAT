@@ -1,0 +1,90 @@
+
+E
+java:S3740Í"/Provide the parametrized type for this generic.(œ¶›!
+E
+java:S3740Í"/Provide the parametrized type for this generic.(œ¶›!
+E
+java:S3740Ù"/Provide the parametrized type for this generic.(æÂƒ
+E
+java:S3740Ù"/Provide the parametrized type for this generic.(æÂƒ
+d
+java:S1192M"IDefine a constant instead of duplicating this literal "Messages" 3 times.(…ŠÉùÿÿÿÿ
+]
+java:S1192s"HDefine a constant instead of duplicating this literal "message" 3 times.(Òœ'
+b	java:S101/"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(’Ê“
+g	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıµ™
+l	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êœ²¸ûÿÿÿÿ
+D
+java:S1604‡"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ
+D
+java:S1604ÿ"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ
+D
+java:S1604¤"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ
+u
+java:S14504"_Remove the "destination_name" field and declare it as a local variable in the relevant methods.(ŞıÄî
+k
+java:S14504"URemove the "myName" field and declare it as a local variable in the relevant methods.(ŞıÄî
+E
+java:S16591"/Declare "messageRecieverID" on a separate line.(—ê ø
+C
+java:S16592"-Declare "saveCurrentTime" on a separate line.(öÂúÂ
+F
+java:S16593"0Declare "messageRefReceiver" on a separate line.(´©Ìß
+F
+java:S16593"0Declare "RecentMessagesPath" on a separate line.(´©Ìß
+?
+java:S16594")Declare "pharma_name" on a separate line.(ŞıÄî
+D
+java:S16594".Declare "destination_name" on a separate line.(ŞıÄî
+r	java:S1163"]Rename this field "RecentMessagesPath" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´©Ìß
+k	java:S1164"VRename this field "pharma_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞıÄî
+p	java:S1164"[Rename this field "destination_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞıÄî
+l	java:S1169"RRename this field "BaseURL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä·Áúÿÿÿÿ
+l	java:S116:"RRename this field "FCM_API" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©™¥“úÿÿÿÿ
+c	java:S116="NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÊŠì
+l	java:S116>"XRename this field "CurrentUserID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÉ’+
+<
+java:S1170:"!Make this final field static too.(©™¥“úÿÿÿÿ
+7
+java:S1170;"!Make this final field static too.(Çş°³
+<
+java:S1170<"!Make this final field static too.(õ¼ÊÂüÿÿÿÿ
+7
+java:S1170="!Make this final field static too.(ŠÊŠì
+`
+java:S1124:"EReorder the modifiers to comply with the Java Language Specification.(©™¥“úÿÿÿÿ
+[
+java:S1124;"EReorder the modifiers to comply with the Java Language Specification.(Çş°³
+`
+java:S1124<"EReorder the modifiers to comply with the Java Language Specification.(õ¼ÊÂüÿÿÿÿ
+G
+java:S1602c",Remove useless curly braces around statement(ùÒƒÀúÿÿÿÿ
+B
+java:S1602h",Remove useless curly braces around statement(¤­·È
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù”îøÿÿÿÿ
+˜
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ùÆ¿Ø
+˜
+java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯øÓÀ
+˜
+java:S1186˜"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹²æµ
+˜
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô°¤¦
+a
+java:S1854È"ERemove this useless assignment to local variable "userMessageKeyRef".(Âé¥Šúÿÿÿÿ
+˜
+java:S1186»"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ò÷ëª
+˜
+java:S1186À"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô°¤¦
+R
+java:S1481È"6Remove this unused "userMessageKeyRef" local variable.(Âé¥Šúÿÿÿÿ
+E
+java:S10684"/Remove this unused "pharma_name" private field.(ŞıÄî
+F
+java:S1068:"+Remove this unused "FCM_API" private field.(©™¥“úÿÿÿÿ
+C
+java:S1068;"-Remove this unused "serverKey" private field.(Çş°³
+J
+java:S1068<"/Remove this unused "contentType" private field.(õ¼ÊÂüÿÿÿÿ
+F
+java:S1068>"1Remove this unused "CurrentUserID" private field.(ğÉ’+

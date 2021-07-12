@@ -1,0 +1,11 @@
+
+c
+java:S1192""MUse already-defined constant 'MESSAGE' instead of duplicating its value here.(——Ì¯
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ê–
+X
+java:S1854'"=Remove this useless assignment to local variable "messageTo".(Û³ù¯şÿÿÿÿ
+X	java:S125,"<This block of commented-out lines of code should be removed.(Ú™ÆĞ8ƒå¼³¨/
+I
+java:S1481'".Remove this unused "messageTo" local variable.(Û³ù¯şÿÿÿÿ
+F
+java:S1068"+Remove this unused "LOG_TAG" private field.(°Ûïøÿÿÿÿ
