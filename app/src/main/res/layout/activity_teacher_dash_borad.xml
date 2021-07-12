@@ -47,29 +47,53 @@
                 app:cardElevation="6dp"
                 >
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    >
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        >
 
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/chat"/>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/chat"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Chat"
-                        android:textColor="#673AB7"
-                        android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Chat"
+                            android:textColor="#673AB7"
+                            android:textSize="18sp" />
 
-                </LinearLayout>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/rel_count"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/oval_messages_count"
+                        android:padding="2dp"
+                        android:layout_margin="10dp"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/txt_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5000"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                </RelativeLayout>
 
 
             </androidx.cardview.widget.CardView>

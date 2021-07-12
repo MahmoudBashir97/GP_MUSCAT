@@ -6,6 +6,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import io.reactivex.CompletableObserver;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +22,7 @@ import com.example.loginpage.R;
 import com.example.loginpage.adapters.ChatList_adapter;
 import com.example.loginpage.models.RecentMessagesIds_Model;
 import com.example.loginpage.models.User_Data_Model;
+import com.example.loginpage.room.DbRepository;
 import com.example.loginpage.room.MessageSchema;
 import com.example.loginpage.ui.MessagesChat_Activity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -65,25 +69,35 @@ public class DoctorsList_Fragment extends Fragment {
                     .putExtra("_id",mlist.get(index).getId())
                     .putExtra("_name",mlist.get(index).getName()));
 
-           /* for (RecentMessagesIds_Model n :recentIds) {
-                if (mlist.get(index).getId().equals(n.getSenderId())){
-                    removeSenderIdFromRecentIds(n.getSenderId());
-                }
-            }*/
+            removeReadRecentIdsMessages(Integer.parseInt(mlist.get(index).getId()),
+                    mlist.get(index).getName(),
+                    mlist.get(index).getDeviceToken());
         });
 
         getDoctorsList();
         return v;
     }
-    private void removeSenderIdFromRecentIds(String senderId){
-        RecentMessagesId.child(myId).child(senderId).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
-                    Log.d("recentIds","removed successfully");
-                }
-            }
-        });
+    private void removeReadRecentIdsMessages(int id, String name, String deviceToken) {
+        MessageSchema schema = new MessageSchema(id,name,deviceToken);
+        DbRepository repository = new DbRepository(getActivity().getApplication());
+        repository.delete(schema).subscribeOn(Schedulers.io())
+                .subscribe(new CompletableObserver() {
+                    @Override
+                    public void onSubscribe(@io.reactivex.annotations.NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.d("messageStatus : ","read!");
+                        Log.d("messageStatus : ","deletedSuccess");
+                    }
+
+                    @Override
+                    public void onError(@io.reactivex.annotations.NonNull Throwable e) {
+                        e.getMessage();
+                    }
+                });
     }
 
     private void getDoctorsList(){

@@ -178,8 +178,6 @@ l
 <app/src/main/java/com/example/loginpage/ui/MainActivity.java,4\7\47d6f72167c0d216770b47dc621be87ac7254f9f
 o
 ?app/src/main/java/com/example/loginpage/ui/StudentActivity.java,3\2\32cabc3788c902664757cb5789c744f828c18db6
-p
-@app/src/main/java/com/example/loginpage/ui/TeacherDashBoard.java,1\a\1a0f96c4df58e8b70b602dc75fd72505a86610da
 g
 7app/src/main/java/com/example/loginpage/Attendance.java,5\7\57ac6d4c62bf7ad654b2c9bfd4951603ab8169ec
 e
