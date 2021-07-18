@@ -266,7 +266,7 @@ public class MessagesChat_Activity extends AppCompatActivity {
                                                 if (task.isSuccessful()){
                                                     Log.e("Send message", "Message Sent Successfully...");
                                                     adapter.notifyDataSetChanged();
-                                                    recentMessagesIdPath();
+                                                    //recentMessagesIdPath();
                                                 }
                                             }
                                         });
